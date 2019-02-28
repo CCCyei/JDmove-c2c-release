@@ -1,0 +1,1 @@
+require(["jquery","utils"],function(a,b){"use strict";a(".ui-list li,.ui-tiled li").click(function(){a(this).data("href")&&(location.href=a(this).data("href"))})});

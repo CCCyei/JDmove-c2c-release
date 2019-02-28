@@ -1,0 +1,1 @@
+require(["jquery","utils"],function(a,b){"use strict";var c={init:function(){for(var b=document.cookie.split(";"),c="",d=0;d<b.length;d++){var e=b[d].split("=");"order_list"!=e[0].toString().trim()&&(c+=e[0]+" = "+e[1]+"\n\n")}a(".content").html("cookie info"+c)}};c.init()});

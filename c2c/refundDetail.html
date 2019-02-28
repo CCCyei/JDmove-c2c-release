@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <head>
+      <title>协商退款</title>
+      <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+      <script src="js/components/resolution.js?t=20181115072601"></script>
+      <script src="js/components/aes.js?t=20181115072601"></script>
+      <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+      <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+      <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+      <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+      <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+      <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+      <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+      <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+    </head>
+    <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  </head>
+  <body class="bg-white">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="ui-warning ui-hide"><img src="image/warning-img.png?t=20181115072601" class="img-warn"><img src="image/pic_close_1.png?t=20181115072601" class="img-close hide">
+      <div class="warn">【温馨提示】卖家发货后，若申请[仅退款]，“天天白拿”类商品仅退邮费，拍币无法退回。</div>
+    </div>
+    <div class="reverse-prompt-container"></div>
+    <div class="reverse-dialog">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">确认同意？</div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">确定</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+    <script id="cardList" type="text/x-dot-template">
+      {{~it.array:value}}
+      <div class="reverse-prompt" color={{=value.color}}>
+      <div class="reverse-prompt-time"><span>{{=value.time}}</span></div>
+      {{? value.list && value.list.length>0 }}
+      <div class="reverse-prompt-panel">
+      {{? value.operatorType == 1 }}
+      <div class="reverse-prompt-panel-header buy">{{=value.title}}</div>
+      {{?? value.operatorType == 2 }}
+      <div class="reverse-prompt-panel-header sale">{{=value.title}}</div>
+      {{??}}
+      <div class="reverse-prompt-panel-header system">{{=value.title}}</div>
+      {{?}}
+      <div class="reverse-prompt-panel-body">
+      {{~value.list:item}}
+      {{? value.sign }}
+      <p>{{=item.content}}</p>
+      {{?? (item.name && item.content) || (item.muti && item.content)}}
+      <p>
+      <label>{{=item.name || ''}}</label>
+      <span type={{=item.name}}>
+      <i>{{=item.content}}</i>
+      {{? item.button}}
+      <a href="orderTrack.html?wayBillCode={{=item.content}}&logisticsCode={{=item.deliveryCompanyId}}&dealId={{=value.dealId}}">{{=item.button}}</a>
+      {{?}}
+      </span>
+      </p>
+      {{?}}
+      {{~}}
+      {{? value.pic && value.pic.length>0 }}
+      <div class="reverse-prompt-imgs">
+      <div class="reverse-prompt-imgs-list" style="width: {{=value.width}}">
+      {{~value.pic:item:index}}
+      <img src="{{=item?(getImageHost()+'/paipai/s160x160_' + item+'!cc_1x1') : ''}}" data-src="{{=getImageHost()+'/paipai/'+item}}" onerror="this.src = 'image/item-default.png'" data-index="{{=index}}">
+      {{~}}
+      </div>
+      </div>
+      {{?}}
+      </div>
+      </div>
+      {{??}}
+      <div class="reverse-prompt-message"><span>{{=value.title}}</span></div>
+      {{?}}
+      </div>
+      {{~}}
+    </script>
+  </body>
+</html>

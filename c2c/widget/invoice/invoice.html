@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <title>发票信息</title>
+      <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+      <script src="js/components/resolution.js"></script>
+      <script src="js/components/aes.js"></script>
+      <script src="js/components/jsencrypt-min.js"></script>
+      <!--script(src="js/components/jweixin.js")-->
+      <script src="js/components/require.js" data-main="js/main"></script>
+      <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+      <script src="//plogin.m.jd.com/st/js/logout.js"></script>
+      <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css">
+      <script src="js/components/m_common_header_bottom2.1.js"></script>
+      <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js"></script>
+    </head>
+    <link rel="stylesheet" href="/css/widget/invoice/invoice.css">
+  </head>
+  <body>
+    <!--include header/header-->
+    <div class="ui-invoice-type">
+      <div class="ui-invoice-type-title">
+        <h2>发票信息</h2>
+      </div>
+      <div class="ui-invoice-type-btn-wrapper cf"><span class="ui-invoice-type-btn active">纸质发票</span><span class="ui-invoice-type-btn">电子发票</span><span class="ui-invoice-type-btn">增值税发票</span></div>
+    </div>
+    <div class="ui-invoice-form-wrapper">
+      <form>
+        <div class="ui-invoice-form-inner">
+          <div class="ui-invoice-head">
+            <div class="ui-invoice-head-title">
+              <h2>发票抬头</h2>
+            </div>
+            <ul class="ui-invoice-head-select cf">
+              <li class="ui-invoice-head-select-item"><span>个人</span></li>
+              <li class="ui-invoice-head-select-item active"><span>单位</span></li>
+            </ul>
+            <div class="ui-invoice-input-box">
+              <input type="text" placeholder="请填写单位名称" class="ui-invoice-input-text">
+            </div>
+            <div class="ui-invoice-tax-code">
+              <input type="text" placeholder="请填写纳税人识别码" class="ui-invoice-input-text"><em class="ui-icon-detailed"></em>
+            </div>
+          </div>
+          <div class="ui-invoice-info">
+            <div class="ui-invoice-info-title">
+              <h2>收票人信息</h2>
+            </div>
+            <div class="ui-invoice-info-input-box">
+              <div class="ui-invoice-info-input-box-inner">
+                <div class="div ui-invoice-info-input-box-left">收票人手机</div>
+                <div class="div ui-invoice-info-input-box-right">
+                  <input type="tel" maxlength="11" value="183****5093">
+                </div>
+              </div>
+              <div class="ui-invoice-info-input-box-inner">
+                <div class="div ui-invoice-info-input-box-left">收票人邮箱</div>
+                <div class="div ui-invoice-info-input-box-right">
+                  <input type="text" placeholder="用来接受电子发票邮件,可选项">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-invoice-content">
+            <div class="ui-invoice-content-title">
+              <h2>发票内容</h2>
+            </div>
+            <div class="ui-invoice-content-select-wrapper">
+              <dl class="ui-invoice-content-select">
+                <dt>二手电脑</dt>
+                <dd><em class="ui-invoice-content-select-icon"></em><span>明细</span></dd>
+                <dd><em class="ui-invoice-content-select-icon"></em><span>办公用品</span></dd>
+                <dd><em class="ui-invoice-content-select-icon"></em><span>耗材</span></dd>
+                <dd><em class="ui-invoice-content-select-icon"></em><span>电脑配件</span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="ui-check-btn"><a href="javascript: void(0)" class="ui-check-btn-red">确定</a></div>
+  </body>
+</html>

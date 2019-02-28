@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>评价详情</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/evaDetail.css?t=20181115072601">
+  <body title="评价详情" class="order">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="eva-top ui-hide"></div>
+    <div class="eva-bottom ui-hide"></div>
+    <div class="eva-content">
+      <div class="eva-content-main"></div>
+      <div class="eva-add ui-hide">追评·0</div>
+      <div class="eva-content-sub"></div>
+    </div>
+    <div class="order-btn-bottom"><span class="btn-save">发布追评</span></div>
+    <script type="text/template" class="product-info">
+      <div class="eva-top-left">
+          <img src="{{=it.pic}}" onerror="this.src = 'image/head_bg.png'">
+      </div>
+      <div class="eva-top-right">
+          <div class="eva-tr-top">{{=it.title || ''}}</div>
+          <div class="eva-tr-bottom">交易成功时间: {{=it.buyerConfirmTime || ''}}</div>
+      </div>
+      
+    </script>
+    <script type="text/template" class="main-comment">
+      <div class="eva-con-item">
+          <div class="eva-ci-top">
+              <div class="eva-ci-left"><img src="{{=it.icon}}" onerror="this.src = 'image/head_bg.png'"></div>
+              <div class="eva-ci-right">
+                  <div class="eva-cir-left">
+                      <div class="eva-cic-nickname">
+                          <div class="eva-cicn">
+                              {{=it.nickName}}
+                              {{? it.isSeller == 1}}
+                              <div class="eva-cic-user buy"><img src="image/buyer.png?t=20181115072601"></div>
+                              {{?? it.isSeller == 2}}
+                              <div class="eva-cic-user sell"><img src="image/seller.png?t=20181115072601"></div>
+                              {{?}}
+                              {{? it.commentMark == 1}}
+                              <div class="eva-cic-score good"><img src="image/assess/good-hand-2x.png?t=20181115072601">好评</div>
+                              {{?}}
+                          </div>
+                      </div>
+                  </div>
+                  <div class="eva-coni-content">
+                  <div class="eva-conic-tip">{{=it.context}}</div>
+                  {{? it.pic && it.pic.length}}
+                  <div class="eva-conic-img">
+                  <ul>
+                  {{~it.pic:value:index}}
+                  <li data-index="{{=index}}"><img src="{{=value?(getImageHost()+'/paipai/s160x160_' + value+'!cc_1x1') : ''}}"  data-src="{{=getImageHost()+'/paipai/'+value}}" onerror="this.src = 'image/item-default.png'"></li>
+                  {{~}}
+                  </ul>
+                  </div>
+                  {{?}}
+                  <div class="eva-cic-date">{{=it.createTimeFM}}</div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      
+      
+    </script>
+    <script type="text/template" class="sub-comment">
+      {{~it.array:value}}
+      <div class="eva-con-item">
+          <div class="eva-ci-top">
+              <div class="eva-ci-left"><img src="{{=value.icon}}" onerror="this.src = 'image/head_bg.png'"></div>
+              <div class="eva-ci-right">
+                  <div class="eva-cir-left">
+                      <div class="eva-cic-nickname">
+                          <div class="eva-cicn">
+                              {{=value.nickName}}
+                              {{? value.isSeller == 1}}
+                              <div class="eva-cic-user buy"><img src="image/buyer.png?t=20181115072601"></div>
+                              {{?? value.isSeller == 2}}
+                              <div class="eva-cic-user sell"><img src="image/seller.png?t=20181115072601"></div>
+                              {{?}}
+                          </div>
+                      </div>
+                  </div>
+                  <div class="eva-coni-content">
+                      <div class="eva-conic-tip">{{=value.context}}</div>
+                      {{? value.pic && value.pic.length}}
+                      <div class="eva-conic-img">
+                      <ul>
+                      {{~value.pic:item:index}}
+                      <li data-index="{{=index}}"><img src="{{=item?(getImageHost()+'/paipai/s160x160_' + item+'!cc_1x1') : ''}}" data-src="{{=getImageHost()+'/paipai/'+item}}" onerror="this.src = 'image/item-default.png'"></li>
+                      {{~}}
+                      </ul>
+                      </div>
+                      {{?}}
+                      <div class="eva-cic-date">{{=value.createTimeFM}}</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {{~}}
+    </script>
+  </body>
+</html>

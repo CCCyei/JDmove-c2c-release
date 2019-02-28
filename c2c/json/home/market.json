@@ -1,0 +1,22 @@
+{
+    "code": 200,
+    "list": [{
+        "id": 11,
+        "name": "京东总部大厦",
+        "count": 1111,
+        "tag": "last",
+        "img": [image/home/mark-things1.png", image/home/mark-things2.png"]
+    }, {
+        "id": 12,
+        "name": "福禄园",
+        "count": 1231,
+        "tag": "hot",
+        "img": [image/home/mark-things2.png", image/home/mark-things1.png"]
+    }, {
+        "id": 13,
+        "name": "定海园",
+        "count": 2351,
+        "tag": "last",
+        "img": [image/home/mark-things1.png", image/home/mark-things2.png"]
+    }]
+}

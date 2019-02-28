@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>修改价格</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/changePrice.css?t=20181115072601">
+  <body title="修改价格">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="bGView ui-hide">
+      <div class="changePriceView">
+        <div class="title"><span>修改价格</span></div>
+        <div class="nameStr"><span></span></div>
+        <div class="soldPrice">
+          <div class="soldStr"><span>售 价 :</span><span class="priceStr">&yen;</span></div>
+          <div class="editPrice">
+            <input id="editPriceInput" maxlength="11" type="text" placeholder="请输入售价" onkeyup="sellPriceVerify(this)" onpaste="sellPriceVerify(this)" oncontextmenu="sellPriceVerify(this)"><img src="image/close-solid.png?t=20181115072601" class="clear">
+          </div>
+        </div>
+        <div class="deliveryPrice">
+          <div class="deliverStr"><span>邮 费 :</span><span class="priceStr">&yen;</span></div>
+          <div class="editPrice">
+            <input id="editDeliveryPriceInput" maxlength="6" type="text" placeholder="请输入邮费" onkeyup="shippingfeeVerify(this)" onpaste="shippingfeeVerify(this)" oncontextmenu="shippingfeeVerify(this)"><img src="image/close-solid.png?t=20181115072601" class="clear">
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="cancelBtn"><span>取 消</span></div>
+          <div class="confirmBtn"><span>确 认</span></div>
+        </div>
+        <script>
+          var deg = true;
+          var deg3 = true;
+          function sellPriceVerify(inp) {
+                  var value = $(inp).val();
+              var reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+          
+              if (reg.test(value)) {
+                  value = Number(value).toString();
+                  if (value > 9999999.99) {
+                      var $div = $('<div class="toast-light">' + "最大不能超过一千万" + '</div>');
+                      $('body').append($div);
+                      if (deg) {
+                          deg = false
+                          if (!$div.hasClass('show')) {
+                              setTimeout(function () {
+                                  $div.addClass('show');
+                              }, 0);
+                              setTimeout(function () {
+                                  $('.toast-light').remove();
+                                  deg = true
+                              }, 2000);
+                          }
+                      }
+                      $(inp).val('');
+                  }
+              } else if (value === '') {
+                  $(inp).val('');
+              } else {
+                  if (value.indexOf('.') === value.length - 1) {
+                      return;
+                  }
+                  var $div = $('<div class="toast-light">' + "仅支持数字格式（保留小数点后两位）" + '</div>');
+                  $('body').append($div);
+                  if (deg) {
+                      deg = false
+                      if (!$div.hasClass('show')) {
+                          setTimeout(function () {
+                              $div.addClass('show');
+                          }, 0);
+                          setTimeout(function () {
+                              $('.toast-light').remove();
+                              deg = true
+                          }, 2000);
+                      }
+                  }
+                  $(inp).val('');
+              }
+          }
+          
+          function shippingfeeVerify(inp) {
+                  let value = $(inp).val();
+              var reg = /(^[1-9]([0-9]+)?$)|(^(0){1}$)|(^[0-9]?$)/;
+          
+              if (reg.test(value)) {
+                  value = Number(value).toString();
+                  var dealtype = $('.ui-opl-bottom').data('dealtype');
+                  if (dealtype == 0) {
+                      if (value > 999) {
+                          var $div = $('<div class="toast-light">' + "最大不能超过一千" + '</div>');
+                          $('body').append($div);
+                          if (deg) {
+                              deg = false
+                              if (!$div.hasClass('show')) {
+                                  setTimeout(function () {
+                                      $div.addClass('show');
+                                  }, 0);
+                                  setTimeout(function () {
+                                      $('.toast-light').remove();
+                                      deg = true
+                                  }, 2000);
+                              }
+                          }
+                          $(inp).val('');
+                      }
+                  } else {
+                      if (value > 25) {
+                          var $div = $('<div class="toast-light">' + "最大运费金额不超过25元" + '</div>');
+                          $('body').append($div);
+                          if (deg) {
+                              deg = false
+                              if (!$div.hasClass('show')) {
+                                  setTimeout(function () {
+                                      $div.addClass('show');
+                                  }, 0);
+                                  setTimeout(function () {
+                                      $('.toast-light').remove();
+                                      deg = true
+                                  }, 2000);
+                              }
+                          }
+                          $(inp).val('');
+                      }
+                  }
+              } else if (value === '') {
+                  $(inp).val('');
+              } else {
+                  var $div = $('<div class="toast-light">' + "邮费仅支持整数" + '</div>');
+                  $('body').append($div);
+                  if (deg) {
+                      deg = false
+                      if (!$div.hasClass('show')) {
+                          setTimeout(function () {
+                              $div.addClass('show');
+                          }, 0);
+                          setTimeout(function () {
+                              $('.toast-light').remove();
+                              deg = true
+                          }, 2000);
+                      }
+                  }
+                  $(inp).val('');
+              }
+          }
+          
+          function checkPrice(obj){
+          
+              var reg = /^[0-9]\d*\.{0,1}\d{0,2}$/;
+              var num = $(obj).val();
+              if (!reg.test(num))
+              {
+                  $(obj).val('');
+              }
+          }
+          function checkWholePrice(obj){
+          
+              var reg = /^[0-9]\d*$/;
+              var num = $(obj).val();
+              if (!reg.test(num))
+              {
+                  $(obj).val('');
+              }
+          }
+          
+          function amount(th) {
+              var regStrs = [['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+                  ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+                  ['\\.(\\d?)\\.+', '.$1'], //禁止录入两个以上的点
+                  ['^(\\d+\\.\\d{2}).+', '$1'] //禁止录入小数点后两位以上【原来的】
+              ];
+              for (i = 0; i < regStrs.length; i++) {
+                  var reg = new RegExp(regStrs[i][0]);
+                  th.value = th.value.replace(reg, regStrs[i][1]);
+              }
+              if (Math.floor(th.value) >= 10000000) {
+                  th.value = th.value.substr(0, 7);
+                  var $div = $('<div class="toast-light">' + "最大不能超过一千万" + '</div>');
+                  $('body').append($div);
+                  if (deg) {
+                      deg = false
+                      if (!$div.hasClass('show')) {
+                          setTimeout(function () {
+                              $div.addClass('show');
+                          }, 0);
+                          setTimeout(function () {
+                              $('.toast-light').remove();
+                              deg = true
+                          }, 2000);
+                      }
+                  }
+              }
+          }
+          function amount3(th) {
+              var regStrs = [['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+                  ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+                  ['\\.(\\d?)\\.+', '.$1'], //禁止录入两个以上的点
+                  ['^(\\d+\\.\\d{1}).+', '$1'] //禁止录入小数点后两位以上【原来的】
+              ];
+              for (i = 0; i < regStrs.length; i++) {
+                  var reg = new RegExp(regStrs[i][0]);
+                  th.value = th.value.replace(reg, regStrs[i][1]);
+              }
+              th.value = th.value.replace(/[^0-9]/g, '')
+              if (th.value.toString().length > 3) {
+                  th.value = th.value.substr(0, 3);
+                  var str = '<div class="toast-light">' + "最大不能超过一千" + '</div>';
+                  var $div = $('<div class="toast-light">' + "最大不能超过一千" + '</div>');
+                  console.log(str + "jhb");
+                  $('body').append($div);
+                  if (deg3) {
+                      deg3 = false
+                      if (!$div.hasClass('show')) {
+                          setTimeout(function () {
+                              $div.addClass('show');
+                          }, 0);
+                          setTimeout(function () {
+                              $('.toast-light').remove();
+                              deg3 = true
+                          }, 2000);
+                      }
+                  }
+              }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

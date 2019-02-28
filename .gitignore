@@ -1,0 +1,16 @@
+#*.iml
+*.class
+target/
+.settings/
+.idea/
+.project
+.classpath
+.DS_Store
+.metadata/
+#workspace.xml
+RemoteSystemsTempFiles/
+.externalToolBuilders
+/*/.gitignore
+node_modules
+dist
+temp

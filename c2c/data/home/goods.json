@@ -1,0 +1,74 @@
+{
+    "code": 200,
+    "list": [{
+        "id": 11,
+        "title": "SONY MDR-1000X HiRe 无线降噪立体声耳机",
+        "img": image/home/goods-things1.png",
+        "money": "1000",
+        "shop": "数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 12,
+        "title": "[99新] 百思图2017款女士 凉鞋 微瑕疵低价转让",
+        "img": image/home/goods-things2.png",
+        "money": "2000",
+        "shop": "mm数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 13,
+        "title": "[99新]新款拼色真皮手提包",
+        "img": image/home/goods-things2.png",
+        "money": "3000",
+        "shop": "地方数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 11,
+        "title": "SONY MDR-1000X HiRe 无线降噪立体声耳机",
+        "img": image/home/goods-things1.png",
+        "money": "1000",
+        "shop": "数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 12,
+        "title": "[99新] 百思图2017款女士 凉鞋 微瑕疵低价转让",
+        "img": image/home/goods-things2.png",
+        "money": "2000",
+        "shop": "mm数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 13,
+        "title": "[99新]新款拼色真皮手提包",
+        "img": image/home/goods-things2.png",
+        "money": "3000",
+        "shop": "地方数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 11,
+        "title": "SONY MDR-1000X HiRe 无线降噪立体声耳机",
+        "img": image/home/goods-things1.png",
+        "money": "1000",
+        "shop": "数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 12,
+        "title": "[99新] 百思图2017款女士 凉鞋 微瑕疵低价转让",
+        "img": image/home/goods-things2.png",
+        "money": "2000",
+        "shop": "mm数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 13,
+        "title": "[99新]新款拼色真皮手提包",
+        "img": image/home/goods-things2.png",
+        "money": "3000",
+        "shop": "地方数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }, {
+        "id": 11,
+        "title": "SONY MDR-1000X HiRe 无线降噪立体声耳机",
+        "img": image/home/goods-things1.png",
+        "money": "1000",
+        "shop": "数码旗舰店",
+        "time": "2017-03-03 00:03:33"
+    }]
+}

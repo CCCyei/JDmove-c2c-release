@@ -1,0 +1,73 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: rgb(204, 210, 200);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.content {
+  margin: 50px 0;
+}
+
+.content ul {
+  padding: 0 20px;
+}
+
+.content ul .tip {
+  color: red;
+  line-height: 40px;
+  border: 1px dashed red;
+}
+
+.content ul li {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid rgb(241, 240, 239)
+}
+
+.red {
+  color: red;
+}
+.blue{
+  color: blue;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(204, 210, 200);
+}
+
+footer li {
+  float: left;
+  width: 33%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.selected {
+  background: red;
+  color: rgb(64, 238, 20)
+}
+
+.hide {
+  display: none;
+}

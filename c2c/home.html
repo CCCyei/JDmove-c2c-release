@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>c2c首页</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/home/swiper.css?t=20181115072601">
+  <link rel="stylesheet" href="css/widget/home/home.css?t=20181115072601">
+  <body>
+    <div class="home">
+      <header class="header">
+        <div class="search">
+          <input><i class="search-btn"></i><a class="search-info"><span>99</span></a>
+        </div>
+        <div class="logo"><img src="image/home/logo.png?t=20181115072601"></div><a class="recyle-btn">立即回收</a>
+      </header>
+      <section id="recyle" class="recyle">
+        <div class="recyle-tab-type"><span data-name="recyle" class="recyle-tab-type-active">回收乐</span><span data-name="buy-used">买二手</span></div>
+        <div class="recyle-box">
+          <div class="recyle-box-row recyle-box-row-two"></div>
+          <div class="recyle-box-row"></div>
+          <div class="recyle-box-row"></div>
+        </div>
+      </section>
+      <section class="ad"><a href=""><img src=""></a></section>
+      <section class="question">
+        <div class="question-title"><span class="question-label">常见问题</span><span class="question-more">更多 &gt;</span></div>
+        <div class="question-box"></div>
+      </section>
+      <section id="buy-used" class="recommend">
+        <div class="recommend-title"><img src="image/home/pai.png?t=20181115072601">优品推荐</div>
+        <div class="recommend-swiper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="recommend-type">
+          <div class="recommend-type-row"></div>
+          <div class="recommend-type-row"></div>
+        </div>
+        <div class="recommend-seckill">
+          <div class="recommend-seckill-title">秒杀专区</div>
+          <div class="recommend-seckill-time"></div>
+          <div class="recommend-seckill-list">
+            <ul></ul>
+          </div>
+        </div>
+      </section>
+      <section class="activity">
+        <div class="activity-row">
+          <div class="activity-text"></div>
+          <div class="activity-colum"></div>
+        </div>
+        <div class="activity-row"></div>
+      </section>
+      <section class="market">
+        <div class="market-title"><span class="market-label">集市推荐</span><span class="market-more"><img src="image/home/market-tag.png?t=20181115072601">
+            <Ailina>刚刚卖出了iPhone6s 32G手机</Ailina></span></div>
+        <div class="market-list">
+          <ul>
+            <li class="market-list-more"><img src="image/home/jishiniao-2x.png?t=20181115072601"><span>更多集市</span></li>
+          </ul>
+        </div>
+      </section>
+      <section class="goods">
+        <div class="goods-type">
+          <div data-name="hot" class="goods-type-tab goods-type-tab-active">热门推荐</div>
+          <div data-name="nearby" class="goods-type-tab">附近宝贝</div>
+        </div>
+        <div class="goods-list">
+          <ul id="goods-list-left"></ul>
+          <ul id="goods-list-right"></ul>
+        </div>
+        <div class="nearby-list"></div>
+        <div class="goods-no-more">没有更多宝贝啦～</div>
+      </section>
+      <footer class="footer">
+        <div><img src="image/home/small-home.png?t=20181115072601">首页</div>
+        <div><img src="image/home/small-cart.png?t=20181115072601">我要买</div>
+        <div><img src="image/home/small-sell.png?t=20181115072601">我要卖</div>
+        <div><img src="image/home/small-rent.png?t=20181115072601">租赁</div>
+        <div><img src="image/home/small-mine.png?t=20181115072601">我的</div>
+      </footer>
+      <div class="ui-back-top"><a href="javascript:void(0)" onclick="window.scrollTo(0,0);"><img src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部"></a></div>
+    </div>
+  </body><script id="floor123" type="text/x-dot-template">
+  {{~it.array:value}}
+  <div class="recyle-box-thing">
+  <img src={{=value.img}} data-url={{=value.url}}>
+  <div class="recyle-box-info">
+  <p class="recyle-box-title">{{=value.title}}</p>
+  <p>{{=value.desc}}</p>
+  </div>
+  </div>
+  {{~}}
+  </script>
+  <script id="floor5" type="text/x-dot-template">
+  {{~it.array:value}}
+  <div class="swiper-slide" data-url={{=value.url}}>
+  <img src={{=value.img}}>
+  </div>
+  {{~}}
+  </script>
+  <script id="floor6" type="text/x-dot-template">
+  {{? it.type === 'big' }}
+  <div class="activity-text-name">{{=it.title}}</div>
+  <div class="activity-text-sub">{{=it.desc}}</div>
+  <div class="activity-img"><img src={{=it.img}}></div>
+  {{??}}
+  <div class="activity-common" data-url={{=it.url}}>
+  <img src={{=it.img}}>
+  <div class="activity-common-name">{{=it.title}}</div>
+  <div class="activity-common-sub">{{=it.desc}}</div>
+  </div>
+  {{?}}
+  </script>
+  <script id="floor7" type="text/x-dot-template">
+  {{? it.type === 'main' }}
+  <div class="question-box-info" data-url={{=it.url}}>
+  <img src={{=it.img}}>
+  <div class="question-box-font">{{=it.title}}</div>
+  </div>
+  {{??}}
+  <div class="question-box-title" data-url={{=it.url}}>{{=it.title}}</div>
+  {{?}}
+  </script>
+  <script id="floor8" type="text/x-dot-template">
+  <div class="recomend-type-click" data-url={{=it.url}}>
+  <img src={{=it.img}}>
+  <div class="recomend-type-title">{{=it.title}}</div>
+  </div>
+  </script>
+  <script id="seckillTime" type="text/x-dot-template">
+  {{~it.array:value:index}}
+  <div>
+  <span data-id={{=value.secKillId}}>{{=value.startTime}}</span>
+  </br>
+  <span>{{=value.title}}</span>
+  </div>
+  {{~}}
+  </script>
+  <script id="seckillList" type="text/x-dot-template">
+  {{~it.items:value}}
+  <li>
+  <div class="recommend-seckill-img">
+  <img class="lazy-seckill" data-original={{= value.mainPic }}>
+  </div>
+  <div class="recommend-seckill-name">{{= value.title }}</div>
+  <div class="recommend-seckill-money"><span>￥{{= value.price }}</span><span>{{= value.originalPrice }}</span></div>
+  <div class="recommend-seckill-percent">
+  {{? !it.start }}
+  <div class="recommend-seckill-percent-mater">敬请期待</div>
+  <div style="width:0%;" class="recommend-seckill-percent-bar"></div>
+  {{??}}
+  <div class="recommend-seckill-percent-mater count">{{= value.stockRate }}</div>
+  <div style="width:{{= value.percent }}%;" class="recommend-seckill-percent-bar"></div>
+  {{?}}
+  </div>
+  </li>
+  {{~}}
+  </script>
+  <script id="marketTmp" type="text/x-dot-template">
+  {{~it.array:value}}
+  <li>
+  <div class="market-list-name">
+  {{? value.tag === 'last' }}
+  <img src="image/home/last.png?t=20181115072601">
+  {{?? value.tag === 'hot' }}
+  <img src="image/home/hot.png?t=20181115072601">
+  {{??}}
+  {{?}}
+  {{= value.circleName }}<span>(宝贝{{= value.itemCount }}件)</span>
+  </div>
+  <div class="market-list-imgbox">
+  {{~value.items:pic}}
+  <img src={{=pic.mainPic}}>
+  {{~}}
+  </div>
+  </li>
+  {{~}}
+  </script>
+  <script id="goodsTmp" type="text/x-dot-template">
+  <li>
+  <div class="goods-list-img"><img src={{=it.mainPic}}></div>
+  <div class="goods-list-name">{{=it.title}}</div>
+  <div class="goods-list-money">¥ {{=it.price}}<span>{{=it.nickname}}</span></div>
+  </li>
+  </script>
+  <script id="nearbyTmp" type="text/x-dot-template">
+  {{~it.array:value}}
+  <div class="nearby-list-box">
+  <div class="nearby-list-box-header">
+  <div class="nearby-list-box-header-pic"><img src={{=value.mainPic}}></div>
+  <div class="nearby-list-box-header-name">
+  <p>{{=value.title}}</p>
+  <p>{{=value.areaDesc}}</p>
+  </div>
+  <div class="nearby-list-box-header-time">{{=new Date(parseInt(value.joinTime, 10)).toLocaleString()}}</div>
+  </div>
+  <div class="nearby-list-box-imgs">
+  <div class="nearby-list-box-imgs-container" style="width:{{=value.width}};">
+  {{~value.pics:pic}}
+  <img src={{=pic}}>
+  {{~}}
+  </div>
+  </div>
+  <div class="nearby-list-box-desc">{{=value.publishDesc}}</div>
+  <div class="nearby-list-box-footer">￥{{=value.price}}</div>
+  </div>
+  {{~}}
+  </script>
+</html>

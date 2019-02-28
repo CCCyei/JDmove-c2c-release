@@ -1,0 +1,42 @@
+
+<div id="scroll-banner" class="cpt-banner">
+  <ul>
+    <!--li-->
+    <!--    a-->
+    <!--        img(src="image/icon_channel_silk.png?t=20181115072601")-->
+    <!--        .cpt-banner-content-->
+    <!--            p 拍拍锦囊-->
+    <!--            i 怎么样才能可以拍出大片一样效果的转卖图-->
+  </ul>
+</div>
+<script type="text/template" class="scrollBanner">
+  {{~ it:item:index }}
+      <li>
+          <a data-href="{{=item.url}}">
+          {{var style=index%2==0 ? "":"radius";}}
+          {{var imageUrl= !isEmpty(item.img) ? item.img: (index%2==0? 'image/icon_channel_silk.png':'image/head_bg.png');}}
+              <img class="{{=style}}" src="{{=imageUrl}}" onerror="this.src = 'image/head_bg.png'">
+              <div class="cpt-banner-content" {{=(index%2==0? 'clstag="pageclick|keycount|PaiPai_201712112|9"':'clstag="pageclick|keycount|PaiPai_201712112|10"')}}>
+                  <p class="cpt-b-t">{{=item.title}}</p>
+                  {{var show_desc=!isEmpty(item.desc) ? item.desc.replace(/\\n/g,"<br>"):'';}}
+                  <p class="cpt-b-b">{{=item.desc}}</p>
+              </div>
+          </a>
+      </li>
+  {{~}}
+</script>
+<script type="text/template" id="scroll">
+  {{~ it:item:index }}
+      <li>
+          <a data-href="{{=item.url}}">
+              {{var imageUrl= !isEmpty(item.img) ? item.img :'image/head_bg.png';}}
+              <img class="radius" src="{{=imageUrl}}" onerror="this.src = 'image/head_bg.png'">
+              <div class="cpt-banner-content">
+              <p class="cpt-b-t">{{=item.title}}  <span>刚刚发布了新的转卖<span></p>
+              {{var show_desc=!isEmpty(item.desc) ? item.desc.replace(/\\n/g,"<br>"):'';}}
+              <p class="cpt-b-b">{{=item.desc}}</p>
+              </div>
+          </a>
+      </li>
+  {{~}}
+</script>

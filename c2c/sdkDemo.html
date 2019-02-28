@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>paipaiSDKDemo</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/sdkDemo.css?t=20181115072601">
+  <body title="paipaiSDKDemo">
+    <div class="content">
+      <ul class="onlycall">
+        <div class="tip">说明：仅唤起原生页面</div>
+        <li id="openJdShare" class="red"> 京东主站的分享协议</li>
+        <li id="openNews" class="red"> 打开消息</li>
+        <li id="callCamera" class="red"> ios 图片上传</li>
+        <li id="callAlert" class="red"> 分享协议</li>
+        <li id="pushToHome" class="green">1.app首页(pushToHome)</li>
+        <li id="pushToProfileHome" class="green">2.查看指定的uin的个人中心(pushToProfileHome)</li>
+        <li id="getUserInfo" class="green">3.查看指定的uin个人主页(getUserInfo)</li>
+        <li id="pushToOthersHome" class="green">4.查看指定用户(uin)的个人主页(pushToOthersHome)</li>
+        <li id="close" class="green">5.关闭当前页面(close)</li>
+        <li id="myMarket" class="green">6.查看我的集市页(myMarket)</li>
+        <li id="marketHome" class="green">7.查看集市首页(marketHome)</li>
+        <li id="marketCreate" class="green">8.查看创建集市页(marketCreate)</li>
+        <li id="marketInviteList" class="green">9.查看集市已邀请列表</li>
+        <li id="marketDetail" class="green">10.查看集市详情页面(marketDetail)</li>
+        <li id="pushToC2CDetail" class="green">11.打开C2C商品详情(pushToC2CDetail)</li>
+        <li id="pushToB2CDetail" class="green">12.打开B2C商品详情(pushToB2CDetail)</li>
+        <li id="c2cPublish" class="green">13.打开C2C发布页面(c2cPublish)</li>
+        <li id="goodsEdit" class="green">14.打开编辑发布页面商品(goodsEdit)</li>
+        <li id="pushToMessageList" class="green">15.打开消息列表(pushToMessageList)</li>
+        <li id="pushToSearch" class="green">16.原生搜索页面(pushToSearch)</li>
+        <li id="showSearchPage" class="green">17.跳转原生搜索结果页(showSearchPage)</li>
+        <li id="pushToGoodsClassify" class="green">18.打开分类页(pushToGoodsClassify)</li>
+        <li id="publish" class="green">19.打开一键转卖列表页面(publish)</li>
+        <li id="publishMask" class="green">20.鹈鹕按钮遮罩层(publishMask)</li>
+        <li id="pubWithActC2C" class="green">21.发布页面支持活动(pubWithAct)(c2c发布)</li>
+        <li id="pubWithAct" class="green">22.发布页面支持活动(pubWithAct)(一键转卖)</li>
+        <li id="fengkong" class="green">23.风控唤起协议(fengkong)</li>
+        <li id="scanQRCodeOpenWebPage" data-type="4" class="green">24.扫描二维码(scanQRCodeOpenWebPage)</li>
+        <li id="pushToHuanXinChat">25.打开环信聊天(pushToHuanXinChat)(下线)</li>
+        <li id="im">26.打开im聊天室(im)(下线)</li>
+        <li id="showBigPic" class="green">27.查看大图(showBigPic)</li>
+        <li id="getPhoneInfo" class="green">28.获取拍拍APP版本号(getPhoneInfo)</li>
+        <li id="showSearchList" class="green">29.唤起店铺搜索(showSearchList)</li>
+        <li id="poolPublish" class="green">30.发布商品到指定的活动商品池(poolPublish)</li>
+        <li id="showLoginViewController" class="green">31.打开登陆(showLoginViewController)</li>
+        <li id="logOut" class="green">32.退出登陆(logOut)</li>
+        <li id="openLocation" class="blue">33.打开定位(openLocation)（后期优化）</li>
+        <li id="pickImage" class="green">34.唤起手机相册(pickImage)</li>
+        <li id="takePhotos" class="green">35.唤起手机相册(2)(takePhotos)</li>
+        <li id="pushToResaleOrder" class="green">36.发布页面含有商品信息(pushToResaleOrder)</li>
+        <li id="pushToActivity" class="green">37.打开活动页面(pushToActivity)</li>
+        <li id="webViewNavigationBarClick" class="green">38.唤起我的订单title-bar点击事件</li>
+      </ul>
+      <ul class="callback hide">
+        <div class="tip">说明：调用原生方法，获得手机信息</div>
+        <li id="scanQRCode" class="green">1.扫描条形码</li>
+        <li id="share" class="green">2.唤起分享弹层(share)</li>
+        <li id="permissionToCheck" class="red">3.权限校验协议(permissionToCheck) input中(1 相机  2 相册  3 定位  4 电话)</li>
+        <input id="permissionToCheckInput" value="1">
+      </ul>
+      <ul class="set hide">
+        <div class="tip">说明：调用方法，设置原生页面属性，例如分享，title，等</div>
+        <li data-type="1" setRigthInfo class="setRigthInfo green">1.分享场景 0或者不传：图文分享</li>
+        <li data-type="2" setRigthInfo class="setRigthInfo green"> 1.分享场景  0或者不传：图文分享</li>
+        <li data-type="3" setRigthInfo class="setRigthInfo green"> 1.分享场景   1：切屏纯图片分享</li>
+        <li data-type="4" setRigthInfo class="setRigthInfo green"> 1.分享场景   2：url链接的纯图片分享</li>
+        <li id="saveImage">2.保存照片协议(saveImage)(下线)</li>
+        <li id="h5TitleEdit" class="blue">3.设置title(h5TitleEdit)(需后期调试)</li>
+        <li id="changeNickname" class="blue">4.h5修改昵称(changeNickname)(需后期调试)</li>
+        <li id="setTopBarShare" class="green">6.设置顶部分享显示</li>
+        <li id="setTopBarSearch" class="green">7.设置顶部搜索显示</li>
+      </ul>
+    </div>
+    <footer class="menu">
+      <li class="submenu selected">唤起协议</li>
+      <li class="submenu">回调协议</li>
+      <li class="submenu">设置协议</li>
+    </footer>
+  </body>
+</html>

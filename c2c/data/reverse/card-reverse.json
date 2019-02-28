@@ -1,0 +1,68 @@
+{
+	"code": "0",
+    "cardList": [
+        {
+            "title": "买家申请退款",
+            "time": "yyyy/MM/ddhh:mm:ss",
+			"operatorType": 1,
+            "operEvent": 31,
+            "list": [
+                {
+                    "name": "退款服务",
+                    "content": "${refundType}"
+                },
+                {
+                    "name": "退款金额",
+                    "content": "￥${refundToBuyer}"
+                },
+                {
+                    "name": "退款原因",
+                    "content": "${refundReasonType}"
+                },
+                {
+                    "name": "退款描述",
+                    "content": "${refundReasonDesc}"
+                }
+            ]
+        },
+        {
+            "title": "卖家拒绝了退款申请",
+            "time": "yyyy/MM/ddhh:mm:ss",
+			"operatorType": 2,
+            "operEvent": 32,
+            "list": [
+                {
+                    "name": "拒绝原因",
+                    "content": "${sellerRefuseType}"
+                },
+                {
+                    "content": "￥${sellerRefundMsg}"
+                }
+            ],
+            "pic": [image/reverse/invalidName@2x.png",image/reverse/invalidName@2x.png",image/reverse/invalidName@2x.png"]
+        },
+        {
+            "title": "买家已发货",
+            "time": "yyyy/MM/ddhh:mm:ss",
+			"operatorType": 1,
+            "operEvent": 54,
+            "list": [
+                {
+                    "name": "物流单号",
+                    "content": "${deliveryCode}",
+                    "button": "查看物流详情"
+                },
+                {
+                    "name": "物流公司",
+                    "content": "${deliveryCompany}"
+                }
+            ]
+        },
+        {
+            "title": "买家已发货",
+            "time": "yyyy/MM/ddhh:mm:ss",
+			"operatorType": 1,
+            "operEvent": 54
+        }
+    ]
+}

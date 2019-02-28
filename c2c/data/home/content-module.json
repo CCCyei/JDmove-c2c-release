@@ -1,0 +1,127 @@
+{
+    "code": "0",
+    "currentTime": 1500971373,
+    "data": {
+        "1": [{
+                "title": "苹果笔记本",
+                "desc": "AppleMacBookAir",
+                "img": "jfs/t7/89/299915948/31499/a03fa50e/5976fa3bNc420bc66.jpg",
+                "url": "https://item.jd.com/2341892.html"
+            },
+            {
+                "title": "魅族手机",
+                "desc": "32G魅族手机",
+                "img": "jfs/t25/308/150013003/34293/cc92c2b5/5976fc9dN1fcb537e.jpg",
+                "url": "https://item.jd.com/4264370.html"
+            }
+        ],
+        "2": [{
+                "title": "华为手机",
+                "desc": "64G华为手机",
+                "img": "jfs/t28/300/157396011/32694/c6d19b3f/5976fcf5N5e5d24e9.jpg",
+                "url": "https://item.jd.com/4264371.html"
+            },
+            {
+                "title": "苹果手机",
+                "desc": "32G苹果手机",
+                "img": "jfs/t13/93/88575017/15027/cda0bf3e/5976fd17Nc4c59c68.jpg",
+                "url": "https://item.jd.com/4264373.html"
+            },
+            {
+                "title": "惠普打印机",
+                "desc": "高清惠普打印机",
+                "img": "jfs/t34/26/652388305/4025/c991017b/5976fd39N599c8dd3.jpg",
+                "url": "https://item.jd.com/4264372.html"
+            },
+            {
+                "title": "联想电脑",
+                "desc": "1080P联想电脑",
+                "img": "jfs/t19/69/80282964/6104/ff15d2c7/5976fd5eNbaa38942.jpg",
+                "url": "https://item.jd.com/4264330.html"
+            }
+        ],
+        "3": [{
+                "title": "小米笔记本",
+                "desc": "1080P小米笔记本",
+                "img": "jfs/t28/309/156414305/16252/ceb86bbf/5976fd7cNd1decaff.jpg",
+                "url": "https://item.jd.com/4264170.html"
+            },
+            {
+                "title": "小米手机",
+                "desc": "32小米手机",
+                "img": "jfs/t34/85/676262285/15027/cda0bf3e/5976fd9dNa4b4195f.jpg",
+                "url": "https://item.jd.com/4262370.html"
+            },
+            {
+                "title": "锤子手机",
+                "desc": "64G锤子手机",
+                "img": "jfs/t22/242/11383614/30619/1893d593/5976fdb4N1c5435db.jpg",
+                "url": "https://item.jd.com/4234370.html"
+            },
+            {
+                "title": "神州笔记本",
+                "desc": "1080P神州笔记本",
+                "img": "jfs/t25/27/148867298/25564/b8ebb405/5976fdceN0882f946.jpg",
+                "url": "https://item.jd.com/4234370.html"
+            }
+        ],
+        "4": [{
+            "title": "戴尔笔记本",
+            "desc": "1080P戴尔笔记本",
+            "img": "jfs/t10/191/266182415/29581/466e19b/5976fdf8N4d3c3879.jpg",
+            "url": "https://item.jd.com/4234370.html"
+        }],
+        "5": [{
+                "title": "三星手机",
+                "desc": "16G三星手机",
+                "img": "jfs/t13/183/82721251/33044/12911d8/5976fe1cN8461d24c.jpg",
+                "url": "https://item.jd.com/4262370.html"
+            },
+            {
+                "title": "联想笔记本",
+                "desc": "联想笔记本高清",
+                "img": "jfs/t31/240/84565542/6104/ff15d2c7/5976fe3bNcc76d575.jpg",
+                "url": "https://item.jd.com/4262370.html"
+            },
+            {
+                "title": "惠普打印机",
+                "desc": "高清惠普打印",
+                "img": "jfs/t34/95/691771870/4025/c991017b/5976fe5dN27a6e9d6.jpg",
+                "url": "https://item.jd.com/4264373.html"
+            },
+            {
+                "title": "华为手机",
+                "desc": "128G华为手机",
+                "img": "jfs/t19/158/84880953/32694/c6d19b3f/5976fe7aN15978441.jpg",
+                "url": "https://item.jd.com/4264370.html"
+            }
+        ],
+        "6": [{
+                "title": "苹果笔记本",
+                "desc": "128G苹果笔记本",
+                "img": "jfs/t25/47/149060200/31499/a03fa50e/5976fec0Na4a909a0.jpg",
+                "url": "https://item.jd.com/4264370.html"
+            },
+            {
+                "title": "联想笔记本",
+                "desc": "高清联想笔记本",
+                "img": "jfs/t10/211/264840367/6104/ff15d2c7/5976fedeNd29c91b2.jpg",
+                "url": "https://item.jd.com/4264320.html"
+            },
+            {
+                "title": "锤子手机",
+                "desc": "64G锤子手机",
+                "img": "jfs/t13/189/85614092/30619/1893d593/5976fef9N007ff105.jpg",
+                "url": "https://item.jd.com/4262370.html"
+            },
+            {
+                "title": "小米手机",
+                "desc": "64G小米手机",
+                "img": "jfs/t31/258/83796016/15027/cda0bf3e/5976ff18N87876ea9.jpg",
+                "url": "https://item.jd.com/4264320.html"
+            }
+        ],
+        "7": []
+    },
+    "result": "请求成功"
+}

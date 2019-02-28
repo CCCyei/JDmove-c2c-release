@@ -1,0 +1,1 @@
+require(["jquery","utils"],function(a,b){"use strict";a(".ui-list li,.ui-tiled li").click(function(){if(a(this).data("href")){var c=a(this).data("href");b.isNotEmpty(c)&&(c=-1!=c.indexOf("?")?c+"&_t="+(new Date).getTime():c+"?_t="+(new Date).getTime(),b.goUrl(c))}})});

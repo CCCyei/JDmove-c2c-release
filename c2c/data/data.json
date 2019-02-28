@@ -1,0 +1,51 @@
+{
+  "message":"文睿的购物车",
+  "status":1,
+  "result":{
+    "totalMoney":100,
+    "list":[
+      {
+        "productId":1,
+        "productName":"MAC BOOK 苹果电脑",
+        "productPrice": 12888,
+        "productNum":2,
+        "productPic":"image/macbook.jpg",
+        "parts":[
+          {
+            "partsId":1001,
+            "partsName":"鼠标"
+          },
+          {
+            "partsId":1002,
+            "partsName":"键盘"
+          }
+        ]
+      },
+      {
+        "productId":2,
+        "productName":"iphone 苹果手机",
+        "productPrice": 6888,
+        "productNum":1,
+        "productPic":"image/iphone.jpg",
+        "parts":[]
+      },{
+        "productId":3,
+        "productName":"华为手机",
+        "productPrice": 3888,
+        "productNum":7,
+        "productPic":"image/huawei.jpg",
+        "parts":[
+          {
+            "partsId":1001,
+            "partsName":"屏幕贴膜"
+          },
+          {
+            "partsId":1002,
+            "partsName":"耳机"
+          }
+        ]
+      }
+    ]
+  }
+
+}

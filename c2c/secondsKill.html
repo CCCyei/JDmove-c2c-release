@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>拍拍秒杀</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/secondKill.css?t=20181115072601">
+  <body title="拍拍秒杀">
+    <div class="ui-box"></div>
+    <script type="text/template" class="renderResellListInfo">
+      {{ for(var i=0;i<it.length;i++){ }}
+      {{ if(it[i].bizType==12){ }}
+      <div>
+      <div class="ui-middle">
+      {{var imageUrl= getImageHost()+'/paipai/s240x240_'+it[i].mainPic+'!cc_1x1' ;}}
+      <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'">
+      <div class="ui-goods">
+      <div class="ui-goods-detail">{{=it[i].title || ''}}</div>
+      <ul>
+      {{ if(it[i].tags && it[i].tags.length>0){ }}
+      {{ for(var j=0;j<it[i].tags.length;j++){ }}
+      <li>{{=it[i].tags[j] || ''}}</li>
+      {{ } }}
+      {{ } }}
+      </ul>
+      <div class="ui-much">
+      <div class="jindu">
+      <p style="width:{{=it[i].stockRate+"%"}}"></p>
+      </div>
+      <div class="ui-num">已售{{=it[i].stockRate || '0'}}%</div>
+      </div>
+      <div class="ui-goods-price"><span class="first">¥</span><span class="price">{{=it[i].price || ''}}</span><span class="second grar">¥</span><span class="second">{{=it[i].originalPrice || ''}}</span></div>
+      </div>
+      </div>
+      </div>
+      {{ } }}
+      {{ } }}
+    </script>
+    <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+      <p>您还未创建收货地址哦~</p>
+      <!--我卖出的页面-->
+      <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+    </div>
+    <div class="ui-down">
+      <div class="ui-img"><img src="image/pai-2x.png?t=20181115072601"></div>
+      <div class="ui-txt">
+        <p class="ui-p1">卖二手上拍拍</p>
+        <p>打开APP购买优质二手商品</p>
+      </div>
+      <div id="ui-btn" clstag="pageclick|keycount|goods__201708106|1">打开App</div>
+      <div class="ui-close"><img src="image/close_x.png?t=20181115072601"></div>
+    </div>
+  </body>
+</html>

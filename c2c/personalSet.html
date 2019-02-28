@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>个人主页</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/personalSet.css?t=20181115072601">
+  <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  <body title="个人主页">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="ui-person">
+      <div class="ui-person-head"><img src="image/head_bg.png?t=20181115072601" onerror="this.src = 'image/head_bg.png'"></div>
+      <div class="ui-person-set">
+        <div class="ui-person-name"></div>
+        <div class="ui-person-num">累计售出0个宝贝</div>
+      </div>
+      <div class="ui-person-done clear">
+        <div class="ui-person-left"><img src="image/real-name0.png?t=20181115072601">
+          <p>未实名认证</p>
+        </div>
+        <div class="ui-person-center"><img src="image/real-persen0.png?t=20181115072601">
+          <p>未实人认证</p>
+        </div>
+        <div class="ui-person-right"><img src="image/real-cd0.png?t=20181115072601">
+          <p>未授权小白信用</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-nav">
+      <div deg="1" class="ui-sell ui-select">在售商品</div>
+      <div deg="0" class="ui-discuss">评价()</div>
+    </div>
+    <div class="ui-box">
+      <div class="ui-discuss-box hide">
+        <div class="ui-discuss-num">共条评价，好评数条</div>
+        <div class="bgview2 hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+          <p>您还未创建收货地址哦~</p>
+        </div>
+        <!--.ui-discuss-->
+        <!--    .ui-header-->
+        <!--        .ui-hd-img-->
+        <!--            img(src="image/head_bg.png?t=20181115072601")-->
+        <!--        .ui-hd-middle-->
+        <!--            .ui-hd-name-->
+        <!--                span.ui-name Ailina-Lv-->
+        <!--                i-->
+        <!--                    span 卖家-->
+        <!--            .ui-hd-area-->
+        <!--                span.sp.ui-time 2017-09-19-->
+        <!--           .ui-hd-price-->
+        <!--                  img(src="image/head-pic.png?t=20181115072601")-->
+        <!--                  span 好评-->
+        <!--    .ui-discuss-detail [99新]手推车高景观婴儿推车 儿童车宝宝伞车高景观车宝宝伞车高景观…-->
+        <!--    .ui-sell-img-->
+        <!--        .sell-img-->
+        <!--              img(src='image/ceshi-pic.png')-->
+        <!--              img(src='image/ceshi-pic.png')-->
+        <!--              img(src='image/ceshi-pic.png')-->
+        <!--              img(src='image/ceshi-pic.png')-->
+        <!--              img(src='image/ceshi-pic.png')-->
+        <!--              img(src='image/ceshi-pic.png')-->
+        <script type="text/template" class="renderSellListInfo">
+          {{ for(var i=0;i<it.length;i++){ }}
+              <div class="ui-discuss">
+                  <div class="ui-header">
+                      <div class="ui-hd-img">
+                      {{var imageUrl=getImageIcon('/paipai/s64x64_',it[i].icon,'!cc_1x1') ;}}
+                      <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'"}}>
+                      </div>
+                      <div class="ui-hd-middle">
+                      <div class="ui-hd-name"><span class="ui-name">{{=it[i].nickName || ''}}</span><i>
+                      {{ if(it[i].isSeller == 2){ }}
+                      <span>卖家</span>
+                      {{ }else if(it[i].isSeller == 1){ }}
+                      <span>买家</span>
+                      {{ } }}
+                      </i></div>
+                      <div class="ui-hd-area"><span class="sp ui-time">{{=it[i].createTimeFM || ''}}</span></div>
+                      {{ if(it[i].commentMark == 1){ }}
+                      <div class="ui-hd-price"><img src="image/haoping.png?t=20181115072601"><span>好评</span></div>
+                      {{ } }}
+                      </div>
+                  </div>
+                  <div class="ui-discuss-detail">{{=it[i].context || ''}}</div>
+                  {{ if(it[i].pics && it[i].pics.length>0){ }}
+                      <div class="ui-sell-img">
+                          <div class="sell-img" style="width:{{=it[i].with}}">
+                              {{ for(var j=0;j<it[i].pics.length;j++){ }}
+                              {{var imageUrl=getImageIcon('/paipai/s200x200_',it[i].pics[j],'!cc_1x1') ;}}
+                              <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'">
+                              {{ } }}
+                          </div>
+                      </div>
+                  {{ } }}
+              </div>
+          {{ } }}
+        </script>
+      </div>
+      <div class="ui-sell-box">
+        <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+          <p>您还未创建收货地址哦~</p>
+          <!--我卖出的页面-->
+          <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+        </div>
+        <!--.ui-header-->
+        <!--    .ui-hd-img-->
+        <!--        img(src="image/head_bg.png?t=20181115072601")-->
+        <!--    .ui-hd-middle-->
+        <!--        .ui-hd-name-->
+        <!--            span.ui-name Ailina-Lv-->
+        <!--        .ui-hd-area-->
+        <!--            span.sp.ui-time 来自北京，大兴区-->
+        <!--    .ui-hd-price 10天前发布-->
+        <!--.ui-sell-img-->
+        <!--    .sell-img-->
+        <!--        img(src='image/ceshi-pic.png')-->
+        <!--        img(src='image/ceshi-pic.png')-->
+        <!--        img(src='image/ceshi-pic.png')-->
+        <!--        img(src='image/ceshi-pic.png')-->
+        <!--        img(src='image/ceshi-pic.png')-->
+        <!--        img(src='image/ceshi-pic.png')-->
+        <!--.ui-sell-ft-->
+        <!--     .ui-detail [99新]手推车高景观婴儿推车 儿童车宝宝伞车高景观车宝宝伞车高景观…-->
+        <!--     .ui-much-->
+        <!--        div.ui-money ¥ 1,000.00-->
+        <!--        div.ui-zan-->
+        <!--            img(src='image/zan.png')-->
+        <!--            i 99+-->
+        <!--        div.ui-mesege-->
+        <!--            img(src='image/mesege.png')-->
+        <!--            i 99+-->
+        <script type="text/template" class="renderOnSellListInfo">
+          {{ for(var i=0;i<it.length;i++){ }}
+          {{ if(i == 0){ }}
+          <div class="ui-header first" itemid={{=it[i].commodityId}}>
+          {{ }else{ }}
+          <div class="ui-header" itemid={{=it[i].commodityId}}>
+          {{ } }}
+              <div class="ui-hd-img">
+              {{var imageUrl=getImageIcon('/paipai/s100x100_',it[i].icon,'!cc_1x1') ;}}
+              <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'"}}>
+              </div>
+              <div class="ui-hd-middle">
+                  <div class="ui-hd-name"><span class="ui-name">{{=it[i].nickName || ''}}</span></div>
+                  <div class="ui-hd-area"><span class="sp ui-time">来自 {{=it[i].position || ''}}</span></div>
+              </div>
+              <div class="ui-hd-price">{{=it[i].lastOpenAppTimeTip || ''}}</div>
+          </div>
+          <div class="ui-sell-img" itemid={{=it[i].commodityId}}>
+              <div class="sell-img" style="width:{{=it[i].with}}">
+              {{ for(var j=0;j<it[i].pics.length;j++){ }}
+              {{var imageUrl=getImageIcon('/paipai/s200x200_',it[i].pics[j],'!cc_1x1') ;}}
+              <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'">
+              {{ } }}
+              </div>
+          </div>
+          <div class="ui-sell-ft">
+              <div class="ui-detail">{{=it[i].commodityTitle || ''}} {{=it[i].charactersDesc || ''}}</div>
+              <div class="ui-much">
+              <div class="ui-money">¥ {{=it[i].sellPrice || ''}}</div>
+              <div class="ui-zan">
+              {{ if( it[i].collectionCount  > 99){ }}
+                  <img src="image/zan.png?t=20181115072601">
+                  <i>99+</i>
+              {{ }else if( it[i].collectionCount  == 0){ }}
+              <img src="image/zan0.png?t=20181115072601">
+              <i>0</i>
+              {{ }else{ }}
+                  <img src="image/zan.png?t=20181115072601">
+                  <i>{{=it[i].collectionCount  || '0'}}</i>
+              {{ } }}
+              </div>
+              <div class="ui-mesege">
+              {{ if(it[i].commentCount > 99){ }}
+              <img src="image/mesege.png?t=20181115072601">
+              <i>99+</i>
+              {{ }else if( it[i].commentCount == 0){ }}
+              <img src="image/mesege0.png?t=20181115072601">
+              <i>0</i>
+              {{ }else{ }}
+              <img src="image/mesege.png?t=20181115072601">
+              <i>{{=it[i].commentCount || '0'}}</i>
+              {{ } }}
+              </div>
+              </div>
+          </div>
+          {{ } }}
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

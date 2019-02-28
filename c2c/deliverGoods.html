@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我要发货</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/deliverGoods.css?t=20181115072601">
+  <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  <body title="我要发货">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="ui-order-product"><a href="">
+        <div class="ui-op-left"><img src="image/item-default.png?t=20181115072601" onerror="this.src='image/item-default.png'"></div>
+        <div class="ui-op-right">
+          <div class="ui-opl-title"><span></span></div>
+          <div class="ui-opl-bottom"><span> &yen;</span></div>
+        </div></a></div>
+    <div id="ui-order-address" class="ui-order-address ui-order-address-top ui-order-address-border">
+      <div class="ui-order-address1 ui-hide">
+        <div class="ui-address-info"><span class="address-info-th">收货人：</span><span class="address-info-td"></span><span class="address-info-right"></span></div>
+        <div class="ui-address-city"><i class="address-info-th">收货地址：</i><span class="address-info-td"></span></div><img src="image/to-right.png?t=20181115072601">
+      </div>
+      <div class="ui-order-address2 ui-hide"><img src="image/location.png?t=20181115072601" class="location-img"><span>请设置您的收货地址</span><img src="image/to-right.png?t=20181115072601" class="to-right-img"></div><img src="image/addressBorderBottom.png?t=20181115072601" class="address-border-bottom">
+    </div>
+    <div class="ui-btn-bottom">
+      <div class="btn-span btn-span1"><span>填写物流单号</span></div>
+      <div class="btn-span ui-btn-line"><span clstag="PaiPai_201712072|25">叫快递</span></div>
+    </div>
+    <div class="reverse-dialog-dialogWallet">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">去开通钱包
+          <div class="reverse-dialog-panel-tishi">您需要开通京东钱包才可进行发货操作，买家收到货物钱款会打入您的京东钱包~</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">去开通</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-dialogWalletInfo">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info"></div>
+        <div class="reverse-dialog-panel-tishi">您的京东钱包与账户实名信息不一致，会影响您的钱包提现，是否换绑钱包保持信息一致？</div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">继续发货</div>
+          <div id="success">重新绑定</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-dialogOpenApp">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">去开通钱包
+          <div class="reverse-dialog-panel-tishi">“由于您未开通京东钱包，为确保正常收款，请前往APP发货哦~</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">关闭</div>
+          <div id="success">前往APP</div>
+        </div>
+      </div>
+    </div>
+    <script type="text/template" class="product-info">
+      <a href="javascript:void(0);">
+      <div class="ui-op-left">
+      {{var imageUrl= (it.pic && it.pic.length>0) ? getImageHost()+'/paipai/s160x160_'+it.pic[0] : 'image/item-default.png';}}
+      <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'">
+      </div>
+      <div class="ui-op-right">
+      <div class="ui-opl-title">
+      <span>{{=it.commodityName}}</span>
+      </div>
+      <div class="ui-opl-bottom">
+      {{?it.dealType==1}}
+      {{var showPcoin= it.userFlag==2 ? (it.bargainBeforePcoin || it.pcoin):it.pcoin;}}
+      <span> <img src='image/paibiBig.png' class='paibi-img' />&nbsp;&nbsp;{{=showPcoin}}</span>
+      {{??}}
+      <span> &yen; {{=it.dealPayFee}} 元</span>
+       {{?}}
+      <span></span>
+      </div>
+      </div>
+      </a>
+    </script>
+    <script type="text/template" id="addrInfo">
+      <div class="ui-address-info">
+      <span class="address-info-th">收货人：</span>
+      <span class="address-info-td">{{=it.receiveName}}</span>
+      <span class="address-info-right">{{=it.receiveMobile}}</span>
+      </div>
+      <div class="ui-address-city">
+      <i class="address-info-th">收货地址：</i>
+      <span class="address-info-td">{{=it.receiveAddr}}</span>
+      </div>
+    </script>
+  </body>
+</html>

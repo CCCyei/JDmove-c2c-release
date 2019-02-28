@@ -1,0 +1,176 @@
+
+<div class="backView hide">
+  <div class="contentView begin-list">
+    <div class="topView">
+      <div class="t-top">
+        <div class="title">京东服务</div>
+      </div>
+      <div class="top-content">
+        <ul></ul>
+      </div>
+    </div>
+    <script type="text/template" class="renderSearchextServiceList">
+      {{~it:item:index}}
+          {{? !(item.selected==undefined? false:item.selected)}}
+              <li class="service" state=1 key={{=item.key }} name={{=item.name }} value={{=item.value }}><img class="hide"src="image/duihao.png"><span>{{=item.name || ''}}</span></li>
+          {{??}}
+               <li class="service" state=0 style="border: 1px solid red; background: rgb(255, 255, 255); color: rgb(252, 82, 71);" key={{=item.key }} name={{=item.name }} value={{=item.value }}><div class="to-center"><img class=""src="image/duihao.png"><span>{{=item.name || ''}}</span></div></li>
+          {{?}}
+      {{~}}
+    </script>
+    <div class="middleView">
+      <div class="t-top">
+        <div class="title">价格区间</div>
+      </div>
+      <div class="middle-content">
+        <div class="inputView">
+          <input placeholder="最低价" type="number" maxlength="9" class="left"><span>—</span>
+          <input placeholder="最高价" type="number" maxlength="9" class="right">
+        </div>
+        <div class="priceSection">
+          <div class="priceStr"><span>500-999</span>
+            <p>35%选择</p>
+          </div>
+        </div>
+      </div>
+      <div class="allClass">
+        <div class="title">全部分类</div>
+        <div class="right">全部</div><img src="image/right.png">
+      </div>
+    </div>
+    <script type="text/template" class="renderSearchextPriceList">
+      {{~it:item:index}}
+          {{? !(item.isSelect==undefined? false:item.isSelect)}}
+              <div state=1 class="priceStr" min={{=item.min }} max={{=item.max }}>{{=item.min || ''}}-{{=item.max || ''}}
+              <p>{{=item.canshu || ''}}</p></div>
+          {{??}}
+              <div state=0 style="border: 1px solid red; background: rgb(255, 255, 255); color: rgb(252, 82, 71);" class="priceStr" min={{=item.min }} max={{=item.max }}>{{=item.min || ''}}-{{=item.max || ''}}
+              <p>{{=item.canshu || ''}}</p></div>
+          {{?}}
+      {{~}}
+    </script>
+    <div class="bottomView">
+      <div class="item item-brand">
+        <div class="item-top">
+          <div class="title">品牌</div>
+          <div class="right">全部</div>
+        </div>
+        <div class="item-content">
+          <ul>
+            <li><span>华为</span></li>
+          </ul>
+        </div>
+      </div>
+      <script type="text/template" class="renderSearchextSeleatBrandList">
+        <div class="item-top">
+            <div class="title">品牌</div>
+            {{ if(it.length<=3){ }}
+                <div class="right"></div>
+            {{ }else { }}
+                <div class="right" state=1>全部<img  src="image/select-down.png"></div>
+            {{ } }}
+        </div>
+        <div class="item-content removeHeight">
+            <ul>
+            {{ for(var i=0;i<it.length && i<9;i++){ }}
+                {{ if(it.length>9 && i==8){ }}
+                    <li class="allBrand">全部品牌<img class="li-header-img" src="image/right.png"></li>
+                {{ }else { }}
+                    {{var _show=it[i].isSelect==undefined? false:it[i].isSelect;if(!_show){}}
+                    <li state=1 class="item-content-brand" name={{=it[i].name }} brandId={{=it[i].brandId }}><div class="to-center"><img class="hide"src="image/duihao.png"><span>{{=it[i].name || ''}}</span></div></li>
+                    {{}else{}}
+                    <li state=0 style="border: 1px solid red; background: rgb(255, 255, 255); color: rgb(252, 82, 71);" class="item-content-brand" name={{=it[i].name }} brandId={{=it[i].brandId }}><div class="to-center"><img class=""src="image/duihao.png"><span>{{=it[i].name || ''}}</span></div></li>
+                    {{};}}
+                {{ } }}
+        
+            {{ } }}
+            </ul>
+        </div>
+      </script>
+    </div>
+    <div id="item-color" class="bottomView"></div>
+    <script type="text/template" class="renderSearchextSeleatColorList">
+      {{ for(var i=0;i<it.length;i++){ }}
+          <div class="item" expandId={{=it[i].expandId}}>
+              <div class="item-top">
+                  <div class="title">{{=it[i].expandName || ''}}</div>
+                  {{ if(it[i].attrs.length<=3){ }}
+                  {{ }else { }}
+                  <div class="right" state=1>全部<img  src="image/select-down.png"></div>
+                  {{ } }}
+              </div>
+              <div class="item-content removeHeight">
+                  <ul>
+                      {{ for(var j=0;j<it[i].attrs.length;j++){ }}
+                          {{var _show=it[i].attrs[j].isSelect==undefined? false:it[i].attrs[j].isSelect;if(!_show){}}
+                              <li state=1 i="{{=i}}" j="{{=j}}" key={{=it[i].attrs[j].key }} value={{=it[i].attrs[j].value }}><div class="to-center"><img class="hide"src="image/duihao.png"><span>{{=it[i].attrs[j].name || ''}}</span></div></li>
+                          {{}else{}}
+                              <li state=0 i="{{=i}}" j="{{=j}}" style="border: 1px solid red; background: rgb(255, 255, 255); color: rgb(252, 82, 71);" key={{=it[i].attrs[j].key }} value={{=it[i].attrs[j].value }}><div class="to-center"><img class=""src="image/duihao.png"><span>{{=it[i].attrs[j].name || ''}}</span></div></li>
+                              {{}}}
+                      {{ } }}
+                  </ul>
+              </div>
+          </div>
+      {{ } }}
+    </script>
+    <div class="btn">
+      <div class="btn-reset"> 重置</div>
+      <div clstag="pageclick|keycount|XS_M__201708151|22" class="btn-sure"> 确定</div>
+    </div>
+  </div><div class="contentView index-list">
+  </div>
+  <script type="text/template" class="renderSearchextSeleatBrandSpellList">
+    <div class="top-header">
+      <div class="top-header-left"><img src="image/to-left.png"></div>
+        品牌
+      <div class="top-header-right">确定</div>
+    </div>
+    <ul>
+        {{ for(var key in it){ }}
+            <li id={{=key }}>
+                {{?!isEmpty(key)}}
+                    <div class="li-header">{{=key }}</div>
+                {{?}}
+                {{ for(var i=0;i<it[key].length;i++){ }}
+                    <div class="li-line {{=it[key][i].isSelect ? 'brand-select' : ''}}" data-brandId={{=it[key][i].brandId }}>
+                        {{=it[key][i].name }}
+                        <img src="image/big-right-sign.png">
+                    </div>
+                {{ } }}
+            </li>
+        {{ } }}
+    </ul>
+    <div class="index-sign">
+        {{ for(var key in it){ }}
+            {{?!isEmpty(key)}}
+                <a data-key={{=key }}>{{=key }}</a>
+            {{?}}
+        {{ } }}
+    </div>
+  </script>
+  <div class="contentView panel-list hide">
+    <div class="top-header">
+      <div class="top-header-left"><img src="image/to-left.png">全部分类</div>
+    </div>
+    <ul></ul>
+  </div>
+  <script type="text/template" class="renderSearchextSeleatCatList">
+    <li>
+        <div class="li-header ui-cat">全部</div>
+    </li>
+    {{ for(var i=0;i<it.length;i++){ }}
+        <li>
+            <div class="li-header" state=1>{{=it[i].name || ''}}<img class="li-header-img" src="image/select-down.png"></div>
+            <div class="li-box hide">
+                {{ for(var j=0;j<it[i].children.length;j++){ }}
+                    {{var _show=it[i].children[j].isSelect==undefined? false:it[i].children[j].isSelect;if(!_show){}}
+                        <div class="li-line" state=1 i="{{=i}}" j="{{=j}}">{{=it[i].children[j].name || ''}}<img src="image/big-right-sign.png" class="hide select-img"></div>
+                    {{}else{}}
+                        <div class="li-line select-type-line" state=0 i="{{=i}}" j="{{=j}}">{{=it[i].children[j].name || ''}}<img src="image/big-right-sign.png" class="select-img"></div>
+                    {{}}}
+                {{ } }}
+            </div>
+        </li>
+    {{ } }}
+  </script>
+</div>

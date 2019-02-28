@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <head>
+      <title>追评</title>
+      <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+      <script src="js/components/resolution.js?t=20181115072601"></script>
+      <script src="js/components/aes.js?t=20181115072601"></script>
+      <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+      <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+      <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+      <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+      <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+      <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+      <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+      <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+    </head>
+    <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  </head>
+  <body>
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div id="assess-remark" class="reverse-remark">
+      <div class="reverse-remark-title"></div>
+      <div class="reverse-remark-box">
+        <textarea placeholder="请输入您的评价" class="reverse-remark-textarea"></textarea>
+        <div class="reverse-remark-count"><span>0</span><i>/</i>300
+        </div>
+      </div>
+    </div>
+    <div id="assess-img" class="reverse-upload">
+      <div class="reverse-upload-title">添加图片<span>最多上传5张</span></div>
+      <div class="reverse-upload-box">
+        <form enctype="multipart/form-data" action="//bizgw.paipai.com/image/imageUploadH5" method="post" target="uploadPicPanel" class="imgUploadForm">
+          <input type="file" id="imageUpload" name="xzInputFile" accept="image/*" multiple>
+          <input name="imageIndex" type="hidden" value="1">
+          <input name="data" type="hidden" value="">
+          <input name="retUrl" type="hidden" value="http://m.paipai.com/widget/upOk.html">
+          <input name="nameSuffix" type="hidden" value="pic1">
+          <input name="protocol" type="hidden" value="">
+        </form>
+        <div class="reverse-upload-imgs">
+          <div id="uploadImg" class="reverse-upload-btn"><img src="image/reverse/invalidName@2x.png?t=20181115072601">
+            <div>上传图片</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">确认删除这张图片？</div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">确定</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-footer-station"></div>
+    <div class="reverse-footer reverse-footer-one">
+      <div><span id="publish-assess">发布追评</span></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>地址管理</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/addrManger.css?t=20181115072601">
+  <body title="地址管理">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="ui-addr"></div>
+    <script type="text/template" class="addrInfo">
+      {{ for(var i=0;i<it.length;i++){ }}
+      <div class="ui-addr-item" addressId={{=it[i].id||''}}>
+          <div id="ui-adress-one" class="ui-address-default">
+              <div class="ui-address-inner">
+                  <div class="ui-set">
+                  <div class="ui-address-set"><span>收货人:</span><span class="name">{{=it[i].name||''}}</span><span class="tel">{{=it[i].mobile||''}}</span></div>
+                  <div class="ui-address-hint">
+                  {{ if(it[i].addressDefault==true){ }}
+                  <span class="ui-adress-now">收货地址: </span>
+                  {{ }else{ }}
+                  <span>收货地址: </span>
+                  {{ } }}
+                  <span class="addressName">{{=it[i].fullAddress||''}}</span></div>
+                  </div>
+              </div>
+          </div>
+          <div class="ui-adress-edit">
+          <div class="ui-address-inner"><a class="ui-concat" addressId={{=it[i].id||''}}>
+          {{ if(it[i].addressDefault==true){ }}
+               <img src="image/btn-moren-2x.png?t=20181115072601" class="btn-img2 default" addressId={{=it[i].id||''}}>
+               <span class="btn-set btn-edit">默认地址</span>
+          {{ }else{ }}
+               <img src="image/btn-moren2-2x.png?t=20181115072601" class="btn-img2 default" addressId={{=it[i].id||''}}>
+               <span class="btn-set btn-set-edit">设为默认地址</span>
+          {{ } }}
+          </a><a class="ui-edit ui-delete" addressId={{=it[i].id||''}}><img src="image/group20@2x.png?t=20181115072601" class="btn-img" addressId={{=it[i].id||''}}><span class="btn-set delete" addressId={{=it[i].id||''}}>删除</span></a><a class="ui-edit ui-bianji" addressDetail="{{=it[i].addressDetail||''}}" addressId={{=it[i].id||''}} provinceid={{=it[i].provinceId||'1'}} cityid={{=it[i].cityId||'72'}} countryid={{=it[i].countyId||'2189'}} townid={{=it[i].townId||'0'}} addressDefault={{=it[i].addressDefault||'false'}}><img src="image/bianji.png?t=20181115072601" class="btn-img" addressId={{=it[i].id||''}}><span class="btn-set edit" addressId={{=it[i].id||''}}>编辑</span></a></div>
+          </div>
+      </div>
+      {{ } }}
+    </script>
+    <div class="reverse-dialog">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">
+          <div class="reverse-dialog-panel-tishi confirm-goods-warn">确认删除收货地址?</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">确定</div>
+        </div>
+      </div>
+    </div>
+    <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+      <p>您还未创建收货地址哦~</p>
+      <!--我卖出的页面-->
+      <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+    </div>
+    <div class="ui-layer-ft">
+      <p>添加收货地址</p>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+  </body>
+</html>

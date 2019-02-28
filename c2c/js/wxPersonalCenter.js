@@ -1,0 +1,1 @@
+require(["jquery","utils","dot"],function(a,b,c){"use strict";var d={init:function(){console.log("个人中心")}};d.init()});

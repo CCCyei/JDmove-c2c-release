@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>确认订单</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/confirmOrder.css?t=20181115072601">
+  <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  <body title="确认订单">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div id="ui-order-address" class="ui-order-address ui-order-address-top ui-order-address-border">
+      <div class="ui-order-address1 ui-hide">
+        <div class="ui-address-info"><span class="address-info-th">收货人：</span><span class="address-info-td"></span><span class="address-info-right"></span></div>
+        <div class="ui-address-city"><i class="address-info-th">收货地址：</i><span class="address-info-td"></span></div><img src="image/to-right.png?t=20181115072601">
+      </div>
+      <div class="ui-order-address2 ui-hide"><img src="image/location.png?t=20181115072601" class="location-img"><span>请设置您的收货地址</span><img src="image/to-right.png?t=20181115072601" class="to-right-img"></div><img src="image/addressBorderBottom.png?t=20181115072601" class="address-border-bottom">
+    </div>
+    <div class="ui-order-product"><a href="javascript:;">
+        <div class="ui-op-left"><img src="image/item-default.png?t=20181115072601" onerror="this.src='image/item-default.png'"></div>
+        <div class="ui-op-right">
+          <div class="ui-opl-title"><span></span></div>
+          <div class="ui-opl-bottom"><i> &yen;</i><span></span></div>
+        </div>
+        <div class="ui-border-top"></div></a></div>
+    <div class="ui-order-freight">
+      <div class="ui-of-left"><span>运费</span></div>
+      <div class="ui-of-right"><span></span></div>
+      <div class="ui-border-top"></div>
+      <div class="ui-border-botom"></div>
+    </div>
+    <div class="ui-btn-bottom ui-hide">
+      <div class="ui-bb-left"><i></i><span></span></div>
+      <div class="ui-bb-right"><span></span></div>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+    <script type="text/template" class="product-info">
+      <a href='javascript:;'>
+          <div class="ui-op-left">
+              {{var imageUrl= (it.pic && it.pic.length>0) ? getImageHost()+'/paipai/s160x160_'+it.pic+'!cc_1x1' : 'image/item-default.png';}}
+              <img src="{{=imageUrl}}" onerror="this.src = 'image/item-default.png'">
+          </div>
+          <div class="ui-op-right">
+              <div class="right-top">
+                  <div class="ui-opl-title">
+                      <span>{{=it.commodityName ||''}}</span>
+                  </div>
+                                                          {{if(it.commodityType===2) {}}
+              <div class="ui-opl-bottom">
+              <img  src='image/paibiBig.png'  class='paibi-img' />
+              <span class="original-paibi">{{=it.pcoin}}</span>
+              </div>
+                                                                         {{ }else{ }}
+              <div class="ui-opl-bottom">
+              <span> &yen;{{=it.sellPrice|| ''}}</span>
+              <span class="original-price"> </span>
+              </div>
+      
+                                                                         {{}}}
+              </div>
+              {{if(it.isWarranty == 1){}}
+                  <div class="ui-zaibao-logo">
+                      <div class="zaibao-logo-w">
+                          <!--img src='image/zaibao.png' class="zaibao-logo"-->
+                          <span class="jdzaibao">京东在保</span>
+                      </div>
+                  </div>
+              {{ } }}
+          </div>
+      
+      </a>
+    </script>
+    <script type="text/template" id="addrInfo">
+      <img class="location" src="image/location.png?t=20181115072601" alt="定位">
+      <div class="ui-address-info">
+          <span class="address-info-td">{{=it.name || ''}}</span>
+          <span class="address-info-right">{{=it.mobile || ''}}</span>
+      </div>
+      <div class="ui-address-city">
+          <div class="address-info-td">{{=it.fullAddress || it.addressDetail || ''}}</div>
+      </div>
+      <img class="to-right-img" src="image/to-right.png?t=20181115072601">
+    </script>
+    <div class="ui-allPrice"><span>订单总金额</span><i class="yuan">&yen;</i><span class="total-price"></span>
+      <div class="ui-border-top"></div>
+    </div>
+    <div class="reverse-dialog-fail">
+      <div id="txt-box" class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info"></div>
+        <div class="reverse-dialog-panel-btns btns-count-one">
+          <div id="success">我知道了</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-paibi">
+      <div id="txt-box" class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">目前您是拍拍二手商家用户，仅可发布商品，暂不可购买拍拍送商品</div>
+        <div class="reverse-dialog-panel-btns btns-count-one">
+          <div id="success">我知道了</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-down">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">
+          <div class="reverse-dialog-panel-tishi">拍币不够</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">赚拍币</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

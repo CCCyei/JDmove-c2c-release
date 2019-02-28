@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-58.3%" y="-41.7%" width="216.7%" height="216.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0446388134 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FF3434" offset="0%"></stop>
+            <stop stop-color="#F51B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="4-16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="消息中心-留言" transform="translate(-269.000000, -152.000000)" fill="url(#linearGradient-2)">
+            <g id="Bubble" filter="url(#filter-1)" transform="translate(273.000000, 154.000000)">
+                <circle id="Oval" cx="6" cy="6" r="6"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

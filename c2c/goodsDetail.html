@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>商品详情</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  <link rel="stylesheet" href="css/widget/biz/goodsDetail.css?t=20181115072601">
+  <body title="商品详情">
+    <div id="ui-box" class="ui-box hide">
+      <div class="ui-header-titlle hide">
+        <div class="ui-header-back"><img src="image/rectangle4@2x.png?t=20181115072601" class="iconfont"></div>
+        <div class="ui-header-text"> 商品详情</div>
+        <div class="ui-header-more"><img src="image/more2x.png?t=20181115072601" class="iconfont"></div>
+      </div>
+      <div class="ui-header">
+        <div class="ui-hd-img"><img src="image/head_bg.png?t=20181115072601" onerror="this.src ='image/head_bg.png'"></div>
+        <div class="ui-hd-middle">
+          <div class="ui-hd-name"><span class="ui-name"></span>
+            <div class="ui-xinyong hide"><img src="image/goodcredit.png?t=20181115072601" class="ui-img-self"><span>信用良好</span></div>
+          </div>
+          <div class="ui-hd-area"><span class="sp ui-time"></span><span class="sp ui-from-area"></span><span class="sp ui-from"></span></div>
+        </div>
+        <div class="ui-hd-time">
+          <div class="ui-time-now">刚刚来过</div>
+        </div>
+      </div>
+      <div class="ui-content"></div>
+      <div class="ui-middle">
+        <div class="ui-hd-price">
+          <div class="ui-price-now ui-hide"></div>
+          <div class="ui-price-old ui-hide"></div>
+          <div class="ui-paibi-price ui-hide">
+            <div class="paibi-icon"><img src="image/paibiBig.png?t=20181115072601"></div>
+            <div class="paibi-price"></div>
+            <div class="paibi-send-price">
+              <p>邮费12元</p>
+            </div>
+          </div>
+          <ul class="ui-ul-class hide">
+            <script type="text/template" class="renderBuyListnewInfo">
+              {{ for(var i=0;i<it.length;i++){ }}
+              <li class="ui-li">{{=it[i]}}</li>
+              {{ } }}
+            </script>
+          </ul>
+        </div>
+        <div class="ui-zaibao jd-zaibao hide">
+          <div class="zaibao"><img src="image/zaibao.png?t=20181115072601" class="zaibao-icon"><img src="image/jdzaibao.png?t=20181115072601" class="jdzaibao"><span class="text">质保期截止日期约为</span><span class="bao-date"></span><img src="image/ellipsis-icon.png?t=20181115072601" class="ellipsis-icon"></div>
+        </div>
+        <div class="ui-zaibao ui-weixiu hide">
+          <div class="zaibao weixiu"><img src="image/weixiu-icon.png?t=20181115072601" class="zaibao-icon"><img src="image/weixiu.png?t=20181115072601" class="jdzaibao"><span class="text"></span><img src="image/to-right.png?t=20181115072601" class="ellipsis-icon"></div>
+        </div>
+      </div>
+      <ul class="ui-what">
+        <p class="title">商品详情</p>
+        <li>
+          <pre class="ui-li-what"></pre>
+        </li>
+      </ul>
+      <div class="ui-tickits-box hide">
+        <div class="ui-tickits"><img src="image/tickits.png?t=20181115072601" class="ui-tickits-bg1"><img src="image/tickitsCard.png?t=20181115072601" class="ui-tickits-bg2">
+          <div class="ui-tickits-date"><span class="ui-date-left">购买日期</span><span class="ui-date-center"></span><span class="ui-date-right"></span></div>
+          <div class="ui-tickits-class"><span class="ui-class-left">发票类型</span><span class="ui-class-center">电子普通发票</span></div>
+        </div>
+      </div>
+      <ul class="ui-ul-pic">
+        <script type="text/template" class="renderBuyListInfo">
+          {{ for(var i=0;i<it.length;i++){ }}
+              {{ if(it.length % 2==0){ }}
+                  {{ if(i<4){ }}
+                      {{var imageUrl= getImageHost()+'/paipai/'+it[i] || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                      <li class=" pic-first"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ }else{ }}
+                       {{var imageUrl= getImageHost()+'/paipai/s330x330_'+it[i]+'!cc_1x1' || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                       <li class="ui-li-pic"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ } }}
+              {{ }else{ }}
+                  {{ if(i<5){ }}
+                      {{var imageUrl= getImageHost()+'/paipai/'+it[i] || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                      <li class=" pic-first"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ }else{ }}
+                      {{var imageUrl= getImageHost()+'/paipai/s330x330_'+it[i]+'!cc_1x1' || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                      <li class="ui-li-pic"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ } }}
+              {{ } }}
+          {{ } }}
+        </script>
+      </ul>
+      <div class="ui-liulan">
+        <div class="ui-collect-num"><span></span>
+          <div class="ui-img-box"></div>
+          <script type="text/template" class="renderCollecterImg">
+            {{ for(var i=0;i<it.length;i++){ }}
+                {{var imageUrl=getImageIcon('/paipai/s54x54_',it[i],'!cc_1x1') ;}}
+                <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'">
+            {{ } }}
+          </script>
+        </div>
+        <div class="ui-liulan-num">0</div>
+        <div class="ui-liulan-img"><img src="image/liulan2x.png?t=20181115072601"></div>
+      </div>
+      <div class="ui-old-goodsDetail hide"><img id="ui-look-img" src="image/jdLogo.png?t=20181115072601"><span>查看原商品信息</span><img src="image/to-right.png?t=20181115072601" class="ui-to-right"></div>
+      <div class="ui-makert hide"><img src="image/item-default.png?t=20181115072601" onerror="this.src ='image/item-default.png'" class="ui-makert-img">
+        <div class="ui-makert-name-box">
+          <div class="ui-makert-name">商品来源<span>“健身装备集市”</span></div>
+          <div class="ui-makert-num"><span class="ui-person-nunber">人气</span><span class="ui-goods">好物
+              <div class="goods-border-left"></div></span></div>
+        </div><img src="image/to-right.png?t=20181115072601" class="ui-to-right">
+      </div>
+      <div class="ui-person">
+        <div class="ui-person-top"><img src="image/head_bg.png?t=20181115072601" onerror="this.src ='image/head_bg.png'">
+          <p></p>
+        </div>
+        <div class="ui-person-middle">
+          <div class="ui-person-sell"><span>在售商品</span><span></span></div>
+          <div class="ui-person-hassell"><span>已售商品</span><span></span>
+            <div class="border-left"></div>
+            <div class="border-right"></div>
+          </div>
+          <div class="ui-person-come"><span>加入拍拍</span><span></span></div>
+        </div>
+        <div class="ui-person-bottom">
+          <div class="ui-person-rellname"><img src="image/rellName.png?t=20181115072601"><span>已实名认证</span></div>
+          <div class="ui-person-create"><img src="image/nocredit.png?t=20181115072601"><span>未开通小白信用</span></div>
+        </div>
+      </div>
+      <div class="leaveMessage">
+        <div class="leaveMessage-box1"></div>
+        <script type="text/template" class="LeaveMessageInfo">
+          {{ if(it.result.length>0){ }}
+              {{ if(it.totalCount>99){ }}
+              <div class="title">
+                  <span class="titleName">留言·99+</span>
+              </div>
+              {{ }else{ }}
+              <div class="title">
+                  <span class="titleName">留言·{{=it.totalCount}}</span>
+              </div>
+              {{ } }}
+          {{ }else{ }}
+              <div class="title">
+                  <span class="titleName">留言</span>
+              </div>
+              <div class="no-msg">
+                  <img src="image/goodsNoMessage.png?t=20181115072601"  onerror="this.src = 'image/goodsNoMessage.png'">
+                  <p>询问更多细节，快去撩下老板吧～</p>
+                  <div class="leaveMsg"><div>撩一下</div></div>
+              </div>
+          {{ } }}
+        </script>
+        <div class="leaveMessage-box2"></div>
+        <script type="text/template" class="LeaveMoreMessageInfo">
+          {{ for(var i=0;i<it.result.length;i++){ }}
+          <div class="Message-content" nickName={{=it.result[i].nickName}}  commentUin={{=it.result[i].commentUin}} commodityUin={{=it.result[i].commodityUin}} parentCommentId={{=it.result[i].commentId}} targetUin={{=it.result[i].commentUin}} commentId={{=it.result[i].commentId}}>
+              <div class="line"></div>
+              <div class="buyer-message" nickName={{=it.result[i].nickName}} commentUin={{=it.result[i].commentUin}} commodityUin={{=it.result[i].commodityUin}} parentCommentId={{=it.result[i].commentId}} targetUin={{=it.result[i].commentUin}} commentId={{=it.result[i].commentId}} delFlag={{=it.result[i].delFlag}}>
+                  {{var imageUrl=getImageIcon('/paipai/s54x54_',it.result[i].icon,'!cc_1x1') ;}}
+                  <div class="buyer-Info"><img class="headimg" commentUin={{=it.result[i].commentUin}} src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'"><span class="buyer-name">{{=it.result[i].nickName}}</span>
+              {{ if(it.result[i].commentUin==it.result[i].commodityUin ){ }}
+              <img class="saler-icon" src="image/seller.png?t=20181115072601"/>
+              {{ } }}
+              <span class="message-time">{{=it.result[i].createTimeTip}}</span></div>
+                  <div class="buyer-Message"><span class="buyer-messageInfo">{{=it.result[i].context}}</span></div>
+              </div>
+              {{ if(it.result[i].commentRespList && it.result[i].commentRespList.length>0 ){ }}
+                  <div class="second-content">
+                  {{ for(var j=0;j<it.result[i].commentRespList.length;j++){ }}
+                      {{ if(it.result[i].commentRespList[j].commentUin==it.result[i].commentRespList[j].commodityUin ){ }}
+                          <div class="saler-message anser" nickName={{=it.result[i].commentRespList[j].nickName}} commentUin={{=it.result[i].commentRespList[j].commentUin}} commodityUin={{=it.result[i].commentRespList[j].commodityUin}} parentCommentId={{=it.result[i].commentRespList[j].parentCommentId}} targetUin={{=it.result[i].commentRespList[j].commentUin}} commentId={{=it.result[i].commentRespList[j].commentId}} delFlag={{=it.result[i].commentRespList[j].delFlag}}>
+                              {{var imageUrl=getImageIcon('/paipai/s54x54_',it.result[i].commentRespList[j].icon,'!cc_1x1') ;}}
+                              <div class="saler-Info"><img commentUin={{=it.result[i].commentRespList[j].commentUin}} src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'" class="headimg"><span class="saler-name">{{=it.result[i].commentRespList[j].nickName || ''}}</span><img class="saler-icon" src="image/seller.png?t=20181115072601"/><span class="message-time message-time-two">{{=it.result[i].commentRespList[j].createTimeTip || ''}}</span></div>
+                              <div class="saler-Message"><span class="saler-MessageFront">回复</span><span class="replyer-name">@{{=it.result[i].commentRespList[j].targetNickName || ''}}</span><span class="saler-messageInfo">:{{=it.result[i].commentRespList[j].context || ''}}</span></div>
+                          </div>
+                           {{ }else{ }}
+                          <div class="otherBuyer-message anser" nickName={{=it.result[i].commentRespList[j].nickName}} commentUin={{=it.result[i].commentRespList[j].commentUin}} commodityUin={{=it.result[i].commentRespList[j].commodityUin}} parentCommentId={{=it.result[i].commentRespList[j].parentCommentId}} targetUin={{=it.result[i].commentRespList[j].commentUin}} commentId={{=it.result[i].commentRespList[j].commentId}} delFlag={{=it.result[i].commentRespList[j].delFlag}}>
+                              {{var imageUrl=getImageIcon('/paipai/s54x54_',it.result[i].commentRespList[j].icon,'!cc_1x1') ;}}
+                              <div class="otherBuyer-Info"><img commentUin={{=it.result[i].commentRespList[j].commentUin}} src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'" class="headimg"><span class="otherBuyer-name">{{=it.result[i].commentRespList[j].nickName || ''}}</span><span class="message-time message-time-two">{{=it.result[i].commentRespList[j].createTimeTip || ''}}</span></div>
+                              <div class="otherBuyer-Message"><span class="otherBuyer-MessageFront">回复</span><span class="replyer-name">@{{=it.result[i].commentRespList[j].targetNickName || ''}}</span><span class="saler-messageInfo">:{{=it.result[i].commentRespList[j].context || ''}}</span></div>
+                          </div>
+                      {{ } }}
+                  {{ } }}
+               </div>
+              {{ } }}
+          </div>
+          {{ } }}
+        </script>
+      </div>
+      <div class="message-more hide"><span>查看更多</span><img src="image/lookMore.png?t=20181115072601" onerror="this.src ='image/lookMore.png'"></div>
+      <div class="recommend hide"><img src="image/tuijian.png?t=20181115072601" onerror="this.src ='image/tuijian.png'"><span>相似推荐</span><img src="image/tuijian.png?t=20181115072601" onerror="this.src ='image/tuijian.png'"></div>
+      <div class="productLi">
+        <ul>
+          <script type="text/template" class="renderSameRecommendInfo">
+            {{ if(it.length>1){ }}
+                {{ for(var i=0;i<it.length;i++){ }}
+                     <li  bizId={{=it[i].bizId}} itemId={{=it[i].itemId}}>
+                     {{var imageUrl=getImage('/paipai/s368x368_',it[i].mainPic,'!cc_368x368')  ;}}
+                              <div class="productList"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'" class="productImg">
+                            {{ if(it[i].title.indexOf('京东转卖') > -1){ }}
+                                <div class="titleName"><img class="jdResell" src="image/jdResell.png?t=20181115072601"/>{{=it[i].title.substring(6,it[i].title.length) || ''}}</div>
+                             {{ }else{ }}
+                                <div class="titleName">{{=it[i].title || ''}}</div>
+                             {{ } }}
+                             <div class="productPrice"><span class="productPriceFront">¥</span><span class="productPrictStr">{{=it[i].price || ''}}</span></div>
+                                <div class="productArea"><p class="area-from">{{=it[i].areaDesc || ''}}<p/><p class="when-come">9小时前来过<p/></div>
+                              </div>
+                     </li>
+                {{ } }}
+            {{ }else{ }}
+                    <li  bizId={{=it[0].bizId}} itemId={{=it[0].itemId}}>
+                    {{var imageUrl=getImage('/paipai/s368x368_',it[0].mainPic,'!cc_368x368')  ;}}
+                        <div class="productList"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'" class="productImg">
+                        <div class="titleName">{{=it[0].title || ''}}</div>
+                    <div class="productPrice"><span class="productPriceFront">¥</span><span class="productPrictStr">{{=it[0].price || ''}}</span></div>
+                        <div class="productArea">{{=it[0].areaDesc || ''}}</div>
+                        </div>
+                    </li>
+            {{ } }}
+          </script>
+        </ul>
+      </div>
+    </div>
+    <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+      <p>您还未创建收货地址哦~</p>
+      <!--我卖出的页面-->
+      <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+    <div class="reverse-dialog">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">
+          <div class="reverse-dialog-panel-tishi confirm-goods-warn">为更好的保障您的权益与交易安全,您需要按如下提示进行实名认证</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">去认证</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-down">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">需完成实名认证上架商品
+          <div class="reverse-dialog-panel-tishi">由于您未完成"实名认证"发布的商品处于下架状态,请完成认证后,操作上架</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">去认证</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-up">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">商品已下架
+          <div class="reverse-dialog-panel-tishi">赶快让您的商品上架吧~</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">上架商品</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-edit">
+      <div class="reverse-dialog-panel">
+        <div class="reverse-dialog-panel-info">因商品编辑内容不符合拍拍标准,商品未发布成功
+          <div class="reverse-dialog-panel-tishi">请前往拍拍编辑商品信息,重新发布~</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">去编辑</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-delete">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">
+          <div class="reverse-dialog-panel-tishi confirm-goods-warn">是否确定删除</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">确定</div>
+        </div>
+      </div>
+    </div>
+    <div class="reverse-dialog-deleteMsg">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">
+          <div class="reverse-dialog-panel-tishi confirm-goods-warn">确定删除吗？</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">确定</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui-down hide">
+      <div class="ui-img"><img src="image/pai-2x.png?t=20181115072601"></div>
+      <div class="ui-txt">
+        <p class="ui-p1">拍拍二手</p>
+        <p>卖的省心 买的放心</p>
+      </div>
+      <div id="ui-btn" clstag="pageclick|keycount|goods__201708106|1">打开App</div>
+      <div class="ui-close"><img src="image/close_x.png?t=20181115072601"></div>
+    </div>
+    <div class="ui-to-top hide"><img src="image/toTop.png?t=20181115072601"></div>
+    <div class="ui-btn-box-other hide">
+      <div class="btn-left">
+        <div class="ui-message ui-message-other"><img src="image/ui-edit.png?t=20181115072601"><span>留言</span></div>
+        <div isInterest="0" clstag="pageclick|2018_5_22_1526957102819|2" class="ui-collect"><img src="image/kongxin.png?t=20181115072601"><span>收藏</span></div>
+      </div>
+      <div class="btn-right">
+        <div clstag="pageclick|keycount|2018_5_22_1526957102819|3" class="btn-want">
+          <p>立即买</p>
+        </div>
+        <div clstag="pageclick|keycount|PaiPai_201801181|32" class="btn-chat">
+          <p>聊一聊</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-btn-box-self hide">
+      <div class="btn-left">
+        <div class="ui-message ui-message-other"><img src="image/ui-edit.png?t=20181115072601"><span>留言</span></div>
+      </div>
+      <div class="btn-right">
+        <div class="btn-want">
+          <p>编辑</p>
+        </div>
+        <div class="btn-chat">
+          <p>删除</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-box-input hide">
+      <div class="ui-msg-input">
+        <div class="msg-img"><img src="image/head_bg.png?t=20181115072601" onerror="this.src ='image/head_bg.png'"></div>
+        <div class="msg-input">
+          <input type="text" placeholder="请输入信息" class="context">
+        </div>
+        <div class="msg-send">
+          <p>发送</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-iphonex hide"></div>
+    <div class="ui-afterSale-popup-w hide"></div>
+    <script type="text/template" class="renderAfterSalePopupInfo">
+      <div class="ui-afterSale-popup">
+          <div class="ui-top">
+              <div class="ui-title">
+                  <img src="image/jdzb.png?t=20181115072601">
+              </div>
+              <div class="ui-label">
+                  {{if(it.firstdesc){}}
+                      <div class="item">
+                          <img src="image/lable.png?t=20181115072601">
+                          <div class="text">{{=it.firstdesc}}</div>
+                      </div>
+                  {{ } }}
+                  {{if(it.seconddesc){}}
+                      <div class="item">
+                          <img src="image/lable.png?t=20181115072601">
+                          <div class="text">{{=it.seconddesc}}</div>
+                      </div>
+                  {{ } }}
+                  {{if(it.thirddesc){}}
+                      <div class="item">
+                          <img src="image/lable.png?t=20181115072601">
+                          <div class="text">{{=it.thirddesc}}</div>
+                      </div>
+                  {{ } }}
+              </div>
+              <div class="ui-close">
+                  <img src="image/close_x.png?t=20181115072601">
+              </div>
+          </div>
+          <div class="ui-desc">
+              <ul>
+                  {{for(var i=0;i<it.children.length;i++){ }}
+                      {{if(it.children[i]["desc"] == -1){}}
+                          <li class="li-item">
+                              {{=it.children[i].title}}
+                              {{if(it.children[i].children){}}
+                                  <ul class="child-desc">
+                                      {{for(var j = 0; j< it.children[i].children.length; j++) {}}
+                                      <li>{{=it.children[i].children[j].title}}</li>
+                                      {{ } }}
+                                  </ul>
+                              {{ } }}
+                          </li>
+                      {{ } else { }}
+                          <li class="li-item">
+                              <span>{{=it.children[i].title}}</span>
+                              <span class="time">{{=it.warrantyDeadline}}</span>
+                              <span class="desc">
+                                  {{=it.children[i].desc}}
+                              </span>
+                              {{if(it.children[i].children){}}
+                                  <ul class="child-desc">
+                                      {{for(var j = 0; j< it.children[i].children.length; j++) {}}
+                                          <li>{{=it.children[i].children[j].title}}</li>
+                                      {{ } }}
+                                  </ul>
+                              {{ } }}
+                          </li>
+                      {{ } }}
+                  {{ } }}
+              </ul>
+          </div>
+      </div>
+    </script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&amp;ak=36IVNGHZfMElULBNDtZBIu8Wzjf1mxeg"></script>
+  </body>
+</html>

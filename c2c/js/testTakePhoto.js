@@ -1,0 +1,1 @@
+require(["jquery","utils","wx"],function(a,b){var c={init:function(){c.addClick()},addClick:function(){a("body").delegate("button","click",function(){alert(wx.toString()),alert(JSON.stringify(wx)),wx.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["album","camera"],success:function(a){alert(1)}})})}};c.init()});

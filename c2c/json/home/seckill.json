@@ -1,0 +1,53 @@
+{
+    "code": 200,
+    "list": [{
+        "startdate": "2017-02-03",
+        "starttime": "16:00:00",
+        "groupInfoList": [{
+            "pid": 1,
+            "img": image/home/things1.png",
+            "link": "#1",
+            "saleStatus": 1,
+            "percent": 70,
+            "title": "[99新]索尼降噪 立体耳机is32...",
+            "price": "600",
+            "originalPrice": "1200"
+        }, {
+            "pid": 1,
+            "img": image/home/things1.png",
+            "link": "#1",
+            "saleStatus": 1,
+            "percent": 0,
+            "title": "[99新]手推车高 景观婴儿车",
+            "price": "400",
+            "originalPrice": "1500"
+        }, {
+            "pid": 1,
+            "img": image/home/things3.png",
+            "link": "#1",
+            "saleStatus": 1,
+            "percent": 30,
+            "title": "[99新]索尼降噪 立体耳机is32...",
+            "price": "200",
+            "originalPrice": "1100"
+        }, {
+            "pid": 1,
+            "img": image/home/things1.png",
+            "link": "#1",
+            "saleStatus": 1,
+            "percent": 100,
+            "title": "[99新]手推车高 景观婴儿车",
+            "price": "600",
+            "originalPrice": "1200"
+        }, {
+            "pid": 1,
+            "img": image/home/things3.png",
+            "link": "#1",
+            "saleStatus": 1,
+            "percent": 50,
+            "title": "[99新]微量使用 香奈儿香水co...",
+            "price": "100",
+            "originalPrice": "200"
+        }]
+    }]
+}

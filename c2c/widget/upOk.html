@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">    
+    <title>&#x56FE;&#x7247;&#x538B;&#x7F29;</title>
+  </head>
+  <body>
+    <script>
+      function getParameter(name) {
+          name = name.replace(/[\\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+          return results === null ? "" : decodeURIComponent(results[1].replace(/\\+/g, " "));
+      }
+      document.addEventListener('DOMContentLoaded', init, false);
+      function init() {
+          var imagePath = decodeURI(getParameter("imageUrl")) || '';
+          var code = getParameter("code") || 1;
+          var nameSuffix = getParameter("nameSuffix") || '';
+          var imageIndex = getParameter("imageIndex") || 1;
+          var qqUrl = getParameter("qqUrl") || '';
+          if (imagePath.length > 10) {
+              parent["imageLoad_pic" + imageIndex](nameSuffix, imageIndex, imagePath, code,qqUrl);
+          } else {
+              parent["imageLoad_pic" + imageIndex](nameSuffix, imageIndex, imagePath, code,qqUrl);
+          }
+      }
+    </script>
+  </body>
+</html>

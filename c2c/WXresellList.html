@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>卖了换钱</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/WXresellList.css?t=20181115072601">
+  <body title="卖了换钱">
+    <div class="ui-box">
+      <div>
+        <div class="ui-top">订单编号:</div>
+      </div>
+      <script type="text/template" class="renderResellListInfo">
+        {{ for(var i=0;i<it.length;i++){ }}
+        <div class="ui-middle">
+        {{var imageUrl= getImageHost()+'/paipai/s160x160_'+it[i].imgUrl+'!cc_1x1' ;}}
+        <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'">
+        <div class="ui-goods">
+        <div class="ui-goods-detail">【京东转卖】{{=it[i].productName || ''}}</div>
+        <div class="ui-goods-price"><span class="first">¥</span><span>{{=it[i].productPrice || '0.00'}}</span></div>
+        </div>
+        </div>
+        <div class="ui-bottom" skuId={{=it[i].skuId}}>
+        {{ if(it[i].resellState==1){ }}
+        <div class="ui-left-state">已转卖</div>
+        <div class="ui-right-btn J_ping" report-eventlevel="1" report-eventid="MRecycle_Check"  commodityId={{=it[i].commodityId}} resellButtonType={{=it[i].resellButtonType}} resellState={{=it[i].resellState}}>查看</div>
+        {{ }else if(it[i].resellState==2){ }}
+        <div class="ui-left-state">正在转卖</div>
+        <div class="ui-right-btn J_ping" report-eventlevel="1" report-eventid="MRecycle_Check"  commodityId={{=it[i].commodityId}} resellButtonType={{=it[i].resellButtonType}} resellState={{=it[i].resellState}}>查看</div>
+        {{ }else if(it[i].resellState==3){ }}
+        <div class="ui-left-state">已下架</div>
+        <div class="ui-right-btn J_ping" report-eventlevel="1" report-eventid="MRecycle_Check"  commodityId={{=it[i].commodityId}} resellButtonType={{=it[i].resellButtonType}} resellState={{=it[i].resellState}}>查看</div>
+        {{ }else if(it[i].resellState==4){ }}
+        <div class="ui-left-state">审核失败</div>
+        <div class="ui-right-btn J_ping" report-eventlevel="1" report-eventid="MRecycle_Check"  commodityId={{=it[i].commodityId}} resellButtonType={{=it[i].resellButtonType}} resellState={{=it[i].resellState}}>查看</div>
+        {{ }else if(it[i].resellState==5){ }}
+        <div class="ui-left-state">售后商品暂不支持转卖</div>
+        {{ } }}
+        {{ if(it[i].resellButtonType==1){ }}
+        <div class="ui-right-btn quick-entry-link fz12  J_ping" report-eventlevel="1" report-eventid="MRecycle_Resell" report-eventparam="一键转卖" deg="true">一键转卖</div>
+        {{ } }}
+        {{ if(it[i].recycleButton){ }}
+        <div class="ui-right-clect quick-entry-link fz12 J_ping" report-eventlevel="1" report-eventid="MRecycle_Recycle" report-eventparam="一键回收" recycleButtonUrl={{=it[i].recycleButtonUrl}}>一键回收</div>
+        {{ } }}
+        <p></p>
+        </div>
+        {{ } }}
+      </script>
+    </div>
+    <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+      <p>您还未创建收货地址哦~</p>
+      <!--我卖出的页面-->
+      <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+  </body>
+</html>

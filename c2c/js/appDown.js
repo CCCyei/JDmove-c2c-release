@@ -1,0 +1,1 @@
+require(["jquery","utils"],function(a,b){var c={init:function(){var c=b.getDevicesType();1===c?a(".android").css("display","block"):2===c?a(".ios").css("display","block"):b.lightToast("请在移动端打开")}};c.init()});

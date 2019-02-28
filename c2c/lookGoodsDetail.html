@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>商品详情</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/reverse/reverse.css?t=20181115072601">
+  <link rel="stylesheet" href="css/widget/biz/goodsDetail.css?t=20181115072601">
+  <body title="商品详情">
+    <div class="ui-box">
+      <div class="ui-header-titlle hide">
+        <div class="ui-header-back"><img src="image/rectangle4@2x.png?t=20181115072601" class="iconfont"></div>
+        <div class="ui-header-text"> 商品详情</div>
+        <div class="ui-header-more"><img src="image/more2x.png?t=20181115072601" class="iconfont"></div>
+      </div>
+      <div class="ui-header">
+        <div class="ui-hd-img"><img src="image/head-pic.png?t=20181115072601" onerror="this.src ='image/item-default.png'"></div>
+        <div class="ui-hd-middle">
+          <div class="ui-hd-name"><span class="ui-name"></span><img src="image/head-pic-1.png?t=20181115072601" class="ui-img-1"><img src="image/head-pic-self.png?t=20181115072601" class="ui-img-self"></div>
+          <div class="ui-hd-area"><span class="sp ui-time"></span><span class="sp ui-from">来自</span><span class="sp ui-from-area"></span></div>
+        </div>
+        <div class="ui-hd-price">
+          <div class="ui-price-old"></div>
+          <div class="ui-price-now"></div>
+        </div>
+      </div>
+      <div class="ui-content"></div>
+      <ul class="ui-ul-class">
+        <script type="text/template" class="renderBuyListnewInfo">
+          {{ for(var i=0;i<it.length;i++){ }}
+              <li class="ui-li">{{=it[i]}}</li>
+          {{ } }}
+        </script>
+      </ul>
+      <ul class="ui-ul-pic">
+        <script type="text/template" class="renderBuyListInfo">
+          {{ for(var i=0;i<it.length;i++){ }}
+              {{ if(it.length % 2==0){ }}
+                  {{ if(i<4){ }}
+                      {{var imageUrl= getImageHost()+'/paipai/'+it[i] || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                      <li class=" pic-first"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ }else{ }}
+                       {{var imageUrl= getImageHost()+'/paipai/s330x330_'+it[i]+'!cc_1x1' || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                       <li class="ui-li-pic"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ } }}
+              {{ }else{ }}
+                  {{ if(i<5){ }}
+                      {{var imageUrl= getImageHost()+'/paipai/'+it[i] || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                      <li class=" pic-first"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ }else{ }}
+                      {{var imageUrl= getImageHost()+'/paipai/s330x330_'+it[i]+'!cc_1x1' || '//m.360buyimg.com/n12/jfs/t5830/62/4075360839/217548/a18a7ff4/59472ef5Ncd97da47.jpg!q70.jpg';}}
+                      <li class="ui-li-pic"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"></li>
+                  {{ } }}
+              {{ } }}
+          {{ } }}
+        </script>
+      </ul>
+      <div class="ui-liulan">
+        <div class="ui-liulan-num"></div>
+        <div class="ui-liulan-img"><img src="image/liulan2x.png?t=20181115072601"></div>
+      </div>
+      <div class="leaveMessage">
+        <script type="text/template" class="LeaveMessageInfo">
+          {{ if(it.result.length>0){ }}
+              {{ if(it.totalCount>99){ }}
+              <div class="title">
+                  <span class="titleName">留言</span>
+              </div>
+              {{ }else{ }}
+              <div class="title">
+                  <span class="titleName">留言</span>
+              </div>
+              {{ } }}
+          {{ } }}
+          {{ for(var i=0;i<it.result.length;i++){ }}
+          <div class="Message-content">
+              <div class="buyer-message">
+                  {{var imageUrl=getImageIcon('/paipai/s54x54_',it.result[i].icon,'!cc_1x1') ;}}
+                  <div class="buyer-Info"><img class="headimg" src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"><span class="buyer-name">{{=it.result[i].nickName}}</span><span class="message-time">{{=it.result[i].createTimeTip}}</span></div>
+                  <div class="buyer-Message"><span class="buyer-messageInfo">{{=it.result[i].context}}</span></div>
+              </div>
+              {{ if(it.result[i].commentRespList && it.result[i].commentRespList.length>0 ){ }}
+                  {{ for(var j=0;j<it.result[i].commentRespList.length;j++){ }}
+                      {{ if(it.result[i].commentRespList[j].commentUin==it.result[i].commentRespList[j].commodityUin ){ }}
+                          <div class="saler-message">
+                              {{var imageUrl=getImageIcon('/paipai/s54x54_',it.result[i].commentRespList[j].icon,'!cc_1x1') ;}}
+                              <div class="saler-Info"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'" class="headimg"><span class="saler-name">{{=it.result[i].commentRespList[j].nickName || ''}}</span><span class="saler-icon">卖家</span><span class="message-time">{{=it.result[i].commentRespList[j].createTimeTip || ''}}</span></div>
+                              <div class="saler-Message"><span class="saler-MessageFront">主人回复</span><span class="replyer-name">@{{=it.result[i].commentRespList[j].parentNickName || ''}}:</span><span class="saler-messageInfo">{{=it.result[i].commentRespList[j].context || ''}}</span></div>
+                          </div>
+                           {{ }else{ }}
+                          <div class="otherBuyer-message">
+                              {{var imageUrl=getImageIcon('/paipai/s54x54_',it.result[i].commentRespList[j].icon,'!cc_1x1') ;}}
+                              <div class="otherBuyer-Info"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'" class="headimg"><span class="otherBuyer-name">{{=it.result[i].commentRespList[j].nickName || ''}}</span><span class="message-time">{{=it.result[i].commentRespList[j].createTimeTip || ''}}</span></div>
+                              <div class="otherBuyer-Message"><span class="otherBuyer-MessageFront">回复</span><span class="replyer-name">@{{=it.result[i].commentRespList[j].parentNickName || ''}}:</span><span class="otherBuyer-messageInfo">{{=it.result[i].commentRespList[j].context || ''}}</span></div>
+                          </div>
+                      {{ } }}
+                  {{ } }}
+              {{ } }}
+          </div>
+          {{ } }}
+        </script>
+      </div>
+      <div class="recommend"><span></span></div>
+      <div class="productLi">
+        <ul>
+          <script type="text/template" class="renderSameRecommendInfo">
+            {{ if(it.length>1){ }}
+                {{ for(var i=0;i<2;i++){ }}
+                     <li  bizId={{=it[i].bizId}}>
+                     {{var imageUrl=getImageIcon('/paipai/s242x286_',it[i].mainPic,'!cc_121x143')  ;}}
+                              <div class="productList"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'" class="productImg">
+                                <div class="titleName">{{=it[i].title || ''}}</div>
+                                <div class="productPrice"><span class="productPriceFront">¥</span><span class="productPrictStr">{{=it[i].price || ''}}</span></div>
+                                <div class="productArea">{{=it[i].areaDesc || ''}}</div>
+                              </div>
+                     </li>
+                {{ } }}
+            {{ }else{ }}
+                    <li  bizId={{=it[0].bizId}}>
+                    {{var imageUrl=getImageIcon('/paipai/s242x286_',it[0].mainPic,'!cc_121x143')  ;}}
+                        <div class="productList"><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'" class="productImg">
+                        <div class="titleName">{{=it[0].title || ''}}</div>
+                        <div class="productPrice"><span class="productPriceFront">¥</span><span class="productPrictStr">{{=it[0].price || ''}}</span></div>
+                        <div class="productArea">{{=it[0].areaDesc || ''}}</div>
+                        </div>
+                    </li>
+            {{ } }}
+          </script>
+        </ul>
+      </div>
+    </div>
+    <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+      <p>您还未创建收货地址哦~</p>
+      <!--我卖出的页面-->
+      <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+    <div class="reverse-dialog">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info">是否确认收货？
+          <div class="reverse-dialog-panel-tishi confirm-goods-warn">提示:确认收货后将无法退款</div></div>
+        <div class="reverse-dialog-panel-btns">
+          <div id="cancel">取消</div>
+          <div id="success">确定</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui-look"><img src="image/liulan2x.png?t=20181115072601"></div>
+  </body>
+</html>

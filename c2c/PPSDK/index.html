@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>paipaiSDK DEMO1</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+<header>paipaiSDK协议列表</header>
+<div class="content">
+  <ul class="onlycall">
+    <div class="tip">说明：仅唤起原生页面</div>
+    <li id="mymarket" class="blue">唤起我的集市页</li>
+    <li id="marketHome" class="blue">唤起集市首页</li>
+    <li id="marketCreate" class="blue">唤起创建集市页</li>
+
+    <li id="marketDetail" class="blue">唤起集市详情页面</li>
+    <li id="marketInviteList" class="blue">唤起集市已邀请列表</li>
+
+    <li id="mymarketpp" class="red">唤起我的集市页</li>
+    <li id="marketHomepp" class="red">唤起集市首页</li>
+    <li id="marketCreatepp" class="red">唤起创建集市页</li>
+
+    <li id="callfengkong" class="red">风控唤起协议(不通)</li>
+    <li id="callCheckPhone" class="red">唤起原生手机检测(已下线)</li>
+    <li id="callReCheckPhone" class="red">唤起原生手机重新检测(未调通，已下线)</li>
+    <li id="goAppHome" class="blue">回到app首页(已测试)</li>
+    <li id="goMyHome" class="blue">回到我的首页(已测试)</li>
+    <li id="goUserHome" class="blue">查看用户首页（已测试）</li>
+    <li id="goMessageList" class="blue">打开消息列表(已测试)</li>
+    <li id="openSearch" class="blue">原生搜索页面(已测试)</li>
+    <li id="openCategory" class="blue">打开分类页(已测试)</li>
+    <li id="openActivity" class="red">打开活动页(打不开)</li>
+    <li id="openC2CDetail" class="blue">打开C2C详情页(已测试)</li>
+    <li id="openReSale" class="red">一键转卖商品(打不开)</li>
+    <li id="openGoodsEdit" class="blue">打开商品编辑(已测试)</li>
+    <li id="openhuanxinChat" class="blue">打开环信聊天(已测试)</li>
+    <li id="openIMHome" class="blue">打开聊天室(已测试)</li>
+    <li id="openBigImg" class="red">查看大图(已测试)</li>
+    <li id="closePage" class="blue">关闭页面(已测试)</li>
+    <li id="openSearchResult" class="blue">跳转原生搜索结果页(已测试)</li>
+    <li id="openPublish" class="blue">打开一键转卖列表页面(已测试)</li>
+    <li id="openB2CDetail" class="blue">打开B2C商品详情(待审核)</li>
+    <li id="openC2cPublish" class="blue">唤起C2C发布页面(已测试)</li>
+    <li id="showSearchList" class="blue">唤起店铺搜索(待审核)</li>
+    <li id="publishMask" class="blue">鹈鹕按钮遮罩层(已测试)</li>
+  </ul>
+  <ul class="callback hide">
+    <div class="tip">说明：调用原生方法，获得手机信息</div>
+    <li id="openScan" class="blue">唤起二维码扫码(已测试)</li>
+    <li id="openLocation" class="red">打开定位（打不开）</li>
+    <li id="openShare" class="red">打开分享(打不开)</li>
+    <li id="openLogin" class="red">打开登陆(打不开)</li>
+    <li id="openLogout" class="blue">退出登陆(已测试)</li>
+    <li id="getPhoneInfo" class="red">获取本机信息(打不开)</li>
+    <li id="getPhoneDetect" class="red">获取原生检测协议(打不开)</li>
+    <li id="aiHuiShouDetect" class="red">初次获取原生检测协议(打不开)</li>
+    <li id="aiHuiShouRedetect" class="red">唤起重新检测(打不开)</li>
+  </ul>
+  <ul class="set hide">
+    <div class="tip">说明：调用方法，设置原生页面属性，例如分享，title，等</div>
+    <li class="setRightInfo" data-type="1">分享场景 0或者不传：图文分享</li>
+    <li class="setRightInfo" data-type="2">分享场景  0或者不传：图文分享</li>
+    <li class="setRightInfo" data-type="3">分享场景   1：切屏纯图片分享</li>
+    <li class="setRightInfo" data-type="4">分享场景   2：url链接的纯图片分享</li>
+    <li id="scanQRCodeOpenWebPage" data-type="4">扫一扫测试</li>
+    <li id="setTitle" class="blue">设置title(dadsad)</li>
+    <li id="setTopBarShare" class="blue">设置顶部分享显示(已测试)</li>
+    <li id="setTopBarSearch" class="blue">设置顶部搜索显示(已测试)</li>
+    <li id="changeNickname" class="red">h5修改昵称(待审核)</li>
+    <li id="saveImage" class="red">保存照片协议（待审核）</li>
+    <li id="pickImage" class="blue">选择照片/上传照片（已测试）</li>
+    <li id="setAPPInfo" class="blue">H5页面导航栏上附加UI元素（已测试）</li>
+  </ul>
+</div>
+<footer class="menu">
+  <li class="submenu selected">唤起协议</li>
+  <li class="submenu">回调协议</li>
+  <li class="submenu">设置协议</li>
+</footer>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<!--<script type="text/javascript" src="/c2c/js/widget/paipaiSDK.js"></script>-->
+<script type="text/javascript" src="./../../js/widget/paipaiSDK.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>个人转卖</title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/channelPage.css?t=20181115072601">
+  <body title="个人转卖">
+    <!--公共头-->
+    <div class="ui-head ui-hide">
+      <div id="m_common_header"></div>
+    </div>
+    <div class="cp-content">
+      <div class="cp-top">
+        <div class="cpt-img">
+          <ul>
+            <!--li-->
+            <!--    .cpt-content-->
+            <!--        img(src="image/temp.jpg?t=20181115072601")-->
+            <!--        .cpt-content-tip-->
+            <!--            span 热门低价-->
+            <!--li-->
+            <!--    .cpt-content-->
+            <!--        img(src="image/temp.jpg?t=20181115072601")-->
+            <!--        .cpt-content-tip-->
+            <!--            span 热门低价-->
+            <!--li-->
+            <!--    .cpt-content-->
+            <!--        img(src="image/temp.jpg?t=20181115072601")-->
+            <!--        .cpt-content-tip-->
+            <!--            span 热门低价-->
+          </ul>
+        </div>
+        <div class="cpt-tip">
+          <ul>
+            <li>
+              <div class="cptt-content"><img src="image/channel-select.png?t=20181115072601"><span>京东商品一键转卖</span></div>
+            </li>
+            <li>
+              <div class="cptt-content"><img src="image/channel-select.png?t=20181115072601"><span>实名认证真实用户</span></div>
+            </li>
+            <li>
+              <div class="cptt-content"><img src="image/channel-select.png?t=20181115072601"><span>小白信用保驾护航</span></div>
+            </li>
+          </ul>
+        </div>
+        <div id="scroll-banner" class="cpt-banner">
+          <ul>
+            <!--li-->
+            <!--    a-->
+            <!--        img(src="image/icon_channel_silk.png?t=20181115072601")-->
+            <!--        .cpt-banner-content-->
+            <!--            p 拍拍锦囊-->
+            <!--            i 怎么样才能可以拍出大片一样效果的转卖图-->
+          </ul>
+        </div>
+        <script type="text/template" class="scrollBanner">
+          {{~ it:item:index }}
+              <li>
+                  <a data-href="{{=item.url}}">
+                  {{var style=index%2==0 ? "":"radius";}}
+                  {{var imageUrl= !isEmpty(item.img) ? item.img: (index%2==0? 'image/icon_channel_silk.png':'image/head_bg.png');}}
+                      <img class="{{=style}}" src="{{=imageUrl}}" onerror="this.src = 'image/head_bg.png'">
+                      <div class="cpt-banner-content" {{=(index%2==0? 'clstag="pageclick|keycount|PaiPai_201712112|9"':'clstag="pageclick|keycount|PaiPai_201712112|10"')}}>
+                          <p class="cpt-b-t">{{=item.title}}</p>
+                          {{var show_desc=!isEmpty(item.desc) ? item.desc.replace(/\\n/g,"<br>"):'';}}
+                          <p class="cpt-b-b">{{=item.desc}}</p>
+                      </div>
+                  </a>
+              </li>
+          {{~}}
+        </script>
+        <script type="text/template" id="scroll">
+          {{~ it:item:index }}
+              <li>
+                  <a data-href="{{=item.url}}">
+                      {{var imageUrl= !isEmpty(item.img) ? item.img :'image/head_bg.png';}}
+                      <img class="radius" src="{{=imageUrl}}" onerror="this.src = 'image/head_bg.png'">
+                      <div class="cpt-banner-content">
+                      <p class="cpt-b-t">{{=item.title}}  <span>刚刚发布了新的转卖<span></p>
+                      {{var show_desc=!isEmpty(item.desc) ? item.desc.replace(/\\n/g,"<br>"):'';}}
+                      <p class="cpt-b-b">{{=item.desc}}</p>
+                      </div>
+                  </a>
+              </li>
+          {{~}}
+        </script>
+      </div>
+      <div class="cp-floor">
+        <div class="cpf-top">
+          <div class="cpf-tip hide">大家都在看</div>
+          <div class="cpf-kinds-list">
+            <div class="cpf-kinds-content">
+              <div class="cpf-kinds-content2">
+                <!--.ui-line.ui-line-top-->
+                <ul id="kindsShow"></ul>
+                <!--li.curr-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+                <!--li-->
+                <!--    span 智能3C-->
+                <!--    b-->
+              </div>
+              <!--.ui-line.ui-line-bottom-->
+            </div>
+          </div>
+        </div>
+        <div class="cpf-list">
+          <!--.cpf-item-->
+          <!--    .item-top-->
+          <!--        .it-left-->
+          <!--            img(src="image/item-default.png?t=20181115072601")-->
+          <!--        .it-center-->
+          <!--            .it-center-top-->
+          <!--                i 买家名称-->
+          <!--                .it-center-top-right-->
+          <!--                    img(src="image/icon_come.png?t=20181115072601")-->
+          <!--                    b 刚刚来过-->
+          <!--            .it-center-bottom-->
+          <!--                .it-center-bottom-tip-->
+          <!--                    span 实名认证 | 已开通小白信用-->
+          <!--                img(src="image/icon_certification.png?t=20181115072601")-->
+          <!--        .it-right-->
+          <!--            i &yen;-->
+          <!--            span 3468-->
+          <!--    .item-img-list-->
+          <!--        ul-->
+          <!--            li-->
+          <!--                img(src="image/item-default.png?t=20181115072601")-->
+          <!--    .item-title.padding-left-right-->
+          <!--        span 傲听（Otic）K1 蓝牙 HiFi音箱低音炮，便携桌面音箱初雪白新品首发，内置电池，还有新品首发附带蓝牙好-->
+          <!--    .item-bottom.padding-left-right-->
+          <!--        .item-bottom-left-->
+          <!--            span 来自北京密云区-->
+          <!--        .item-heart-->
+          <!--            img(src="image/icon_heart.png?t=20181115072601")-->
+          <!--            |43-->
+          <!--        .item-comment-->
+          <!--            img(src="image/icon_comment.png?t=20181115072601")-->
+          <!--            |365-->
+          <!--    .item-line-->
+        </div>
+        <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+          <p>您还未创建收货地址哦~</p>
+          <!--我卖出的页面-->
+          <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+        </div>
+      </div>
+      <script type="text/template" class="scrollBanner">
+        {{~ it:item:index }}
+            <li>
+                <a data-href="{{=item.url}}">
+                {{var style=index%2==0 ? "":"radius";}}
+                {{var imageUrl= !isEmpty(item.img) ? item.img: (index%2==0? 'image/icon_channel_silk.png':'image/head_bg.png');}}
+                    <img class="{{=style}}" src="{{=imageUrl}}" onerror="this.src = 'image/head_bg.png'">
+                    <div class="cpt-banner-content">
+                        <p class="cpt-b-t">{{=item.title}}</p>
+                        {{var show_desc=!isEmpty(item.desc) ? item.desc.replace(/\\n/g,"<br>"):'';}}
+                        <p class="cpt-b-b">{{=item.desc}}</p>
+                    </div>
+                </a>
+            </li>
+        {{~}}
+      </script>
+      <script type="text/template" class="pool">
+        {{~ it:item:index }}
+            <li class="" data-poolid={{=item.poolId}} data-desc={{=item.desc}}><span>{{=item.title}}</span><b class="ui-hide"></b></li>
+        {{~}}
+      </script>
+      <script type="text/template" class="itemList">
+        {{~ it:item:index }}
+            <div class="cpf-item">
+                <div class="item-top">
+                    {{var imageUrl= !isEmpty(item.icon) ? item.icon: 'image/head_bg.png';}}
+                    <div class="it-left"><img src="{{=imageUrl}}" data-uin="{{=item.uin}}" onerror="this.src = 'image/head_bg.png'"></div>
+                    <div class="it-center">
+                        <div class="it-center-top">
+                            <i>{{=isEmpty(item.nickname) ? '匿名':item.nickname}}</i>
+                            {{var iconShow=showDate(item.lastOpenAppTime) ? 'image/icon_come.png':'image/icon_come_other.png';}}
+                            <div class="it-center-top-right">{{? !isEmpty(item.lastOpenAppTimeTip)}}<img src="{{=iconShow}}"><b>{{=item.lastOpenAppTimeTip}}</b>{{?}}</div>
+                        </div>
+                        <div class="it-center-bottom">
+                            {{ var tips='';if(item.verifyAuthUser) tips=tips+''; if(item.verifyAuthUser && item.xbUser && item.isSwitchOn==1){ tips=tips+' 已开通小白信用'}else if(item.xbUser && item.isSwitchOn==1){tips=tips+'已开通小白信用'};}}
+                            {{? !isEmpty(tips)}}
+                                {{=tips}}
+                            {{?}}
+                        </div>
+                    </div>
+                    <div class="it-right">{{? !isEmpty(item.sellPrice)}}<i>&yen;</i><span>{{=item.sellPrice}}</span>{{?}}</div>
+                </div>
+                <div class="item-img-list" >
+                    {{? (!isEmpty(item.pics) && item.pics.length>0)}}
+                         <ul>
+                            {{~ item.pics:itpc}}
+                                {{var _itpc= !isEmpty(itpc) ? getImageHost()+'/paipai/s300x300_'+itpc+'!cc_1x1': 'image/item-default.png';}}
+                                <li data-commentid="{{=item.commodityId}}"><img src="{{=_itpc}}"></li>
+                            {{~}}
+                        </ul>
+                    {{?}}
+                </div>
+                <div class="item-title padding-left-right" data-commentid="{{=item.commodityId}}">
+                    {{var showT=item.commodityTitle+" "+item.charactersDesc.replace(/\\n/g,"<br>");}}
+                    <span>{{=(item.commoditySource && item.commodityTitle.indexOf('【京东转卖】') < 0 ? '【京东转卖】' : '')}}{{=showT}}</span>
+                </div>
+                <div class="item-bottom padding-left-right">
+                    <div class="item-bottom-left">
+                    {{? !isEmpty(item.position)}}<span>{{='来自 '+item.position}}</span>{{?}}
+                    </div>
+                     <div class="item-heart" data-tag="{{=item.islike}}" data-commentid="{{=item.commodityId}}" data-num="{{=item.collectionCount}}">{{? item.islike==0}}<img src="image/icon_heart_se.png?t=20181115072601">{{??}}<img src="image/icon_heart.png?t=20181115072601">{{?}}<div class='ui-zan'>{{=item.collectionCount}}</div></div>
+                     <div class="item-comment" data-commentid="{{=item.commodityId}}"><img src="image/icon_comment.png?t=20181115072601"><div class='ui-zan'>{{=item.commentCount||0}}</div></div>
+                </div>
+                <div class="item-line"></div>
+            </div>
+        {{~}}
+      </script>
+    </div>
+    <div class="bottom">
+      <div class="btn-public ui-hide">
+        <div clstag="pageclick|keycount|PaiPai_201712112|14" class="btn-tap"></div>
+      </div>
+      <script type="text/template" class="channelAd">
+        {{~ it:item:index }}
+            <li data-ids="{{=item.ids}}" data-title="{{=item.title}}">
+                <div class="cpt-content" clstag="{{='pageclick|keycount|PaiPai_201712112|'+(3+index)}}">
+                    {{var imageUrl= getImageHost()+'/paipai/'+item.img+'!cc_1x1';}}
+                    <img src="{{=imageUrl}}" a="{{=imageUrl}}"onerror="this.src = 'image/item-default.png'">
+                    <div class="cpt-content-tip">
+                        <span>{{=item.title}}</span>
+                    </div>
+                </div>
+            </li>
+        {{~}}
+      </script>
+    </div>
+    <div class="reverse-dialog">
+      <div id="whiteCredit" class="reverse-dialog-panel">
+        <div id="confirm-title" class="reverse-dialog-panel-info"></div>
+        <div class="reverse-dialog-panel-btns">
+        </div>
+      </div>
+    </div>
+    <div class="ui-footer">
+      <!--埋点页面-->
+    </div>
+    <script type="text/javascript">
+      var jap = {
+          siteId: 'JA2017_313791', //站点编号，必传字段，如无需要从子午线申请
+          skuid: '', //商详页上报skuid
+          shopid: '', //店铺页上报店铺id
+          orderid: '', //订单成功提交页上报订单号
+          autoLogPv: true  //是否自动上报pv
+      };
+    </script>
+    <script src="//wl.jd.com/unify.min.js?t=20181115072601"></script>
+    <script type="text/javascript">
+      try{
+          MPing.inputs.Click.attachEvent();
+      }catch(e){}
+      
+      
+    </script>
+    <!--.ui-alertdialog-->
+    <!--    span.hint-->
+    <!--// 返回顶部-->
+    <!--.ui-back-top-->
+    <!--    a(href="javascript:void(0)" onclick="window.scrollTo(0,0);")-->
+    <!--        img(src="//st.360buyimg.com/images/index/scroll-to-top-icon.png?t=20181115072601" alt="回到顶部")-->
+    <!---->
+    <!--//对话框-->
+    <!--.ui-submit-wrap-->
+    <!--    .submit-content-->
+    <!--        h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    <!--.ui-submit-wrap2-->
+    <!--    .submit-content-->
+    <!--        .content-->
+    <!--            h1-->
+    <!--        .operations-->
+    <!--            span.cancel 取消-->
+    <!--            span.confirm 确定-->
+    
+    
+    
+    <!--//a标签 埋点统计-->
+    <!--script.-->
+    <!--    try {-->
+    <!--        MPing.inputs.Click.attachEvent();-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--    try {-->
+    <!--        var pv= new MPing.inputs.PV();-->
+    <!--        var mping = new MPing();-->
+    <!--        mping.send(pv);-->
+    <!--    } catch (e) {-->
+    <!---->
+    <!--    }-->
+    <!--//下载旋转特效-->
+    <!--.ui-loading-->
+    <!--    .ui-circleing-->
+    <!--    .jd-icon-->
+  </body>
+</html>

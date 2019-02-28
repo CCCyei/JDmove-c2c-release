@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8"><!--公共头部域名预解析-->
+<link rel="dns-prefetch" href="//img12.360buyimg.com">
+<link rel="dns-prefetch" href="//img13.360buyimg.com">
+<link rel="dns-prefetch" href="//img14.360buyimg.com">
+<link rel="dns-prefetch" href="//img20.360buyimg.com">
+<link rel="dns-prefetch" href="//img30.360buyimg.com">
+
+<!--公共头部设置-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no,address=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+    <script src="js/components/resolution.js?t=20181115072601"></script>
+    <script src="js/components/aes.js?t=20181115072601"></script>
+    <script src="js/components/jsencrypt-min.js?t=20181115072601"></script>
+    <!--script(src="js/components/jweixin.js?t=20181115072601")-->
+    <script src="js/components/require.js?t=20181115072601" data-main="js/main.js?t=20181115072601"></script>
+    <link rel="icon" href="//www.jd.com/favicon.ico" mce_href="//www.jd.com/favicon.ico" type="image/x-icon">
+    <script src="//plogin.m.jd.com/st/js/logout.js?t=20181115072601"></script>
+    <link rel="stylesheet" href="//st.360buyimg.com/common/commonH_B/css/header.css?t=20181115072601">
+    <script src="js/components/m_common_header_bottom2.1.js?t=20181115072601"></script>
+    <script src="//st.360buyimg.com/common/commonH_B/js/m_common2.1.js?t=20181115072601"></script>
+  </head>
+  <link rel="stylesheet" href="css/widget/biz/circleDetail.css?t=20181115072601">
+  <body title="">
+    <div class="circle-header">
+      <div class="topNav"><span class="rightBtn"></span></div>
+      <div class="bottom">
+        <div class="circleName"></div>
+        <div class="numInfo"><span></span></div>
+      </div>
+    </div>
+    <div class="ui-tittle-flex">
+      <div clstag="pageclick|keycount|marketPage__201708101|1" class="ui-tittle">更多集市</div>
+    </div>
+    <div class="ui-goods-box">
+      <script type="text/template" class="renderBuyListInfo">
+        {{ for(var i=0;i<it.length;i++){ }}
+            {{ if(i==0){ }}
+             <div class="ui-box " id="active" itemid={{=it[i].commodityId}}>
+             {{ }else{ }}
+             <div class="ui-box" itemid={{=it[i].commodityId}}>
+             {{ } }}
+                  <div class="ui-sell-box">
+                    <div class="ui-header">
+                    {{var imageUrl=getImageIcon('/paipai/s100x100_',it[i].icon,'!cc_1x1') || 'image/head_bg.png';}}
+                      <div class="ui-hd-img" uin={{=it[i].uin}}><img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/head_bg.png'"></div> <div class="ui-hd-middle"> <div class="ui-hd-name">{{=it[i].nickName || ''}}</div> <div class="ui-hd-area"><span class="sp ui-time">{{=it[i].position || ''}}</span></div>
+                      </div>
+                      <div class="ui-hd-price">{{=it[i].updateTimeTip || ''}}</div>
+                    </div>
+                    <div class="ui-sell-img">
+                      <div class="sell-img" style="width:{{=it[i].with}}">
+                          {{ for(var j=0;j<it[i].pic.length;j++){ }}
+                            {{var imageUrl= getImageHost()+'/paipai/s192x192_'+it[i].pic[j]+'!cc_1x1' ;}}
+                            <img src="{{=imageUrl}}" a='{{=imageUrl}}' onerror="this.src = 'image/item-default.png'"}}>
+                          {{ } }}
+                      </div>
+                    </div>
+                    <div class="ui-sell-ft">
+                      <div class="ui-detail">{{=it[i].commodityTitle || ''}} {{=it[i].charactersDesc.replace(/\\n/g," ") || ''}}</div>
+                      <div class="ui-much">
+                        <div class="ui-money"><span class="money">¥</span> {{=it[i].sellPrice || ''}}</div>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+        {{ } }}
+      </script>
+    </div>
+    <div class="bgview hide"><img src="image/noAddress.png?t=20181115072601" class="noDataIcon">
+      <p>您还未创建收货地址哦~</p>
+      <!--我卖出的页面-->
+      <div class="mybutton"><span class="one-sell">一键转卖</span><span class="push-sell">发布闲置</span></div>
+    </div>
+  </body>
+</html>

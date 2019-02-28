@@ -1,0 +1,1 @@
+require(["jquery","utils"],function(a,b){"use strict";a(".ui-sousuo").unbind("click").bind("click",function(){var c=a(".ui-key").val(),d={key:encodeURIComponent(c),bizType:13};b.goUrl("/search-b2c.html?reqQuery="+JSON.stringify(d))})});

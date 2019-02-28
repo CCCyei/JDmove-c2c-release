@@ -1,0 +1,1 @@
+require(["jquery","utils","dot"],function(a,b,c){"use strict";var d={init:function(){this.search()},search:function(){a("#search").on("click",function(){var c=a("input").val();!b.isNotEmpty(c)||-1==c.indexOf("paipai.com")&&-1==c.indexOf("jd.com")||(location.href=c)})}};d.init()});
